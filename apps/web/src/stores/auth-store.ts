@@ -170,6 +170,7 @@ export const useAuthStore = create<AuthState>((set, get) => ({
 
   signOut: async () => {
     if (!supabase) return;
+    trackEvent("logged_out");
     await supabase.auth.signOut();
     set({ session: null, user: null, profile: null });
   },

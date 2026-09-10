@@ -3,8 +3,22 @@ import {
   trackToSupabase,
   isSupabaseAnalyticsEnabled,
 } from "../services/analytics-sink";
+import { gaTrack, gaPageView, gaIdentify, isGaEnabled } from "../services/ga";
 
 type EventProperties = Record<string, string | number | boolean | null>;
+
+/**
+ * Forward an event to Google Analytics 4. `page_view` is mapped to GA's
+ * explicit page_view so it isn't double-counted (gtag auto page_view is off).
+ */
+function trackToGa(event: string, properties?: EventProperties): void {
+  if (event === "page_view") {
+    const route = properties?.route;
+    gaPageView(typeof route === "string" ? route : undefined);
+    return;
+  }
+  gaTrack(event, properties);
+}
 
 const analyticsKey = import.meta.env.VITE_PUBLIC_POSTHOG_KEY;
 const analyticsHost = import.meta.env.VITE_PUBLIC_POSTHOG_HOST;
@@ -30,8 +44,10 @@ export function useAnalytics() {
     (event: string, properties?: EventProperties) => {
       // PostHog (if configured) …
       void getAnalyticsClient().then((client) => client?.capture(event, properties));
-      // … and the Supabase analytics_events table (if configured).
+      // … the Supabase analytics_events table (if configured) …
       trackToSupabase(event, properties);
+      // … and Google Analytics 4 (if configured).
+      trackToGa(event, properties);
     },
     [],
   );
@@ -39,6 +55,7 @@ export function useAnalytics() {
   const identify = useCallback(
     (userId: string, properties?: EventProperties) => {
       void getAnalyticsClient().then((client) => client?.identify(userId, properties));
+      gaIdentify(userId);
     },
     [],
   );
@@ -47,7 +64,9 @@ export function useAnalytics() {
     track,
     identify,
     isEnabled:
-      Boolean(analyticsKey && analyticsHost) || isSupabaseAnalyticsEnabled,
+      Boolean(analyticsKey && analyticsHost) ||
+      isSupabaseAnalyticsEnabled ||
+      isGaEnabled,
   };
 }
 
@@ -55,6 +74,7 @@ export function useAnalytics() {
 export function trackEvent(event: string, properties?: EventProperties): void {
   void getAnalyticsClient().then((client) => client?.capture(event, properties));
   trackToSupabase(event, properties);
+  trackToGa(event, properties);
 }
 
 export const AnalyticsEvents = {
