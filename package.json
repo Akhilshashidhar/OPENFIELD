@@ -5,12 +5,12 @@
   "description": "Openfield — a free, browser-based video editor with an AI layer on top",
   "type": "module",
   "scripts": {
-    "dev": "pnpm --filter @openreel/web dev",
-    "build:wasm": "pnpm --filter @openreel/core build:wasm",
-    "build": "pnpm build:wasm && pnpm --filter @openreel/web build",
-    "preview": "pnpm --filter @openreel/web preview",
-    "deploy": "pnpm build && pnpm --filter @openreel/web deploy",
-    "deploy:preview": "pnpm build && pnpm --filter @openreel/web deploy:preview",
+    "dev": "pnpm --filter @openfield/web dev",
+    "build:wasm": "pnpm --filter @openfield/core build:wasm",
+    "build": "pnpm build:wasm && pnpm --filter @openfield/web build",
+    "preview": "pnpm --filter @openfield/web preview",
+    "deploy": "pnpm build && pnpm --filter @openfield/web deploy",
+    "deploy:preview": "pnpm build && pnpm --filter @openfield/web deploy:preview",
     "test": "pnpm -r test:run",
     "test:watch": "pnpm -r test",
     "lint": "pnpm -r lint",
@@ -36,7 +36,7 @@
     "color-grading",
     "export"
   ],
-  "author": "Augustus Otu and Contributors",
+  "author": "OPENFIELD A",
   "license": "MIT",
   "repository": {
     "type": "git",
