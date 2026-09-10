@@ -1,6 +1,6 @@
 import type { JSX } from "react";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftIconButton as IconButton } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftIconButton as IconButton } from "@openfield/ui";
 import { CircleAlert, X } from "@/icons/lucide-compat";
 
 export type ChatErrorAction = "general" | "api-keys" | "new-chat" | null;

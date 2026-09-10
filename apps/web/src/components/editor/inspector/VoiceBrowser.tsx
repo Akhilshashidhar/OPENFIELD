@@ -9,11 +9,11 @@ import {
   Loader2,
   Settings,
 } from "@/icons/lucide-compat";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftIconButton as IconButton } from "@openreel/ui";
-import { ToolcraftSelectableCard as SelectableCard } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
-import { ToolcraftTextInputControl } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftIconButton as IconButton } from "@openfield/ui";
+import { ToolcraftSelectableCard as SelectableCard } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
+import { ToolcraftTextInputControl } from "@openfield/ui";
 import { useSettingsStore } from "../../../stores/settings-store";
 import type { ElevenLabsVoice } from "./tts-types";
 

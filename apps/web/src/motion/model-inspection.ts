@@ -7,7 +7,7 @@ import type {
   ModelInspectionReport,
   ModelInspectionTexture,
   ModelInspectionWarning,
-} from "@openreel/agent";
+} from "@openfield/agent";
 
 const HIGH_TRIANGLE_WARNING_THRESHOLD = 250_000;
 const LARGE_TEXTURE_WARNING_THRESHOLD = 4096;

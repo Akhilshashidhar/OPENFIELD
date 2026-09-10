@@ -1,4 +1,4 @@
-import type { Action } from "@openreel/core/types/actions";
+import type { Action } from "@openfield/core/types/actions";
 import {
   DEFAULT_SHAPE_STYLE,
   SHAPE_TYPES,
@@ -8,8 +8,8 @@ import {
   type ShadowStyle,
   type CornerRadii,
   type ShapeStyle,
-} from "@openreel/core/graphics/types";
-import { motionEngine } from "@openreel/core/motion/motion-engine";
+} from "@openfield/core/graphics/types";
+import { motionEngine } from "@openfield/core/motion/motion-engine";
 import {
   detectMotionBeatMarkersFromPeaks,
   generateMotionBeatMarkersAtBpm,
@@ -19,7 +19,7 @@ import {
   updateMotionCompositionMarker,
   removeMotionCompositionMarker,
   applyMotionAnimationPresetToBeats,
-} from "@openreel/core/motion/motion-markers";
+} from "@openfield/core/motion/motion-markers";
 import {
   isMotionAnimatableProperty,
   upsertMotionLayerKeyframe,
@@ -42,41 +42,41 @@ import {
   setMotionKeyframeRoving,
   MOTION_ANIMATABLE_PROPERTIES,
   type MotionAnimatableProperty,
-} from "@openreel/core/motion/motion-keyframes";
-import { getMotionPreset } from "@openreel/core/motion/motion-presets";
+} from "@openfield/core/motion/motion-keyframes";
+import { getMotionPreset } from "@openfield/core/motion/motion-presets";
 import {
   createMotionVariable,
   updateMotionCompositionVariable,
   removeMotionCompositionVariable,
   coerceMotionVariableValue,
-} from "@openreel/core/motion/motion-variables";
+} from "@openfield/core/motion/motion-variables";
 import {
   addMotionLayerVariableBinding,
   removeMotionLayerVariableBinding,
   isMotionVariableBindingCompatible,
   getCompatibleMotionVariableBindingTargets,
-} from "@openreel/core/motion/motion-variable-bindings";
-import { createMotionAdjustmentLayer } from "@openreel/core/motion/motion-adjustment-layers";
-import { createMotionNullLayer } from "@openreel/core/motion/motion-null-layers";
-import { createMotionParticleLayer } from "@openreel/core/motion/motion-particles";
+} from "@openfield/core/motion/motion-variable-bindings";
+import { createMotionAdjustmentLayer } from "@openfield/core/motion/motion-adjustment-layers";
+import { createMotionNullLayer } from "@openfield/core/motion/motion-null-layers";
+import { createMotionParticleLayer } from "@openfield/core/motion/motion-particles";
 import {
   getMotionShaderFillDefs,
   getMotionShaderEffectDefs,
   getMotionShaderTextDefs,
   getMotionShaderDef,
   listGeneratedMotionShaders,
-} from "@openreel/core/motion/shaders/index";
+} from "@openfield/core/motion/shaders/index";
 import type {
   MotionShaderDef,
   MotionShaderParamDef,
   MotionShaderParamType,
   MotionShaderCategory,
-} from "@openreel/core/motion/shaders/index";
-import { validateMotionShaderSource } from "@openreel/core/motion/motion-shader-validator";
+} from "@openfield/core/motion/shaders/index";
+import { validateMotionShaderSource } from "@openfield/core/motion/motion-shader-validator";
 import {
   createMotionScene3DLayer,
   MOTION_OBJECT_3D_KINDS,
-} from "@openreel/core/motion/motion-scene3d";
+} from "@openfield/core/motion/motion-scene3d";
 import {
   buildMotionPathData,
   upsertMotionShapePathKeyframe,
@@ -88,12 +88,12 @@ import {
   getEditableMotionShapePathPoints,
   parseMotionPathSegments,
   type MotionShapePathPoint,
-} from "@openreel/core/motion/motion-shape-path";
-import { buildMotionShapePolyline } from "@openreel/core/motion/motion-shape-modifiers";
+} from "@openfield/core/motion/motion-shape-path";
+import { buildMotionShapePolyline } from "@openfield/core/motion/motion-shape-modifiers";
 import {
   createMotionImageLayerFromAsset,
   createMotionImageAssetFromMediaItem,
-} from "@openreel/core/motion/motion-assets";
+} from "@openfield/core/motion/motion-assets";
 import {
   buildMotionShapeStyle,
   buildMotionUiLayers,
@@ -111,20 +111,20 @@ import {
   type MotionUiShapeStyleSpec,
   type MotionUiTextStyleSpec,
   type BuildMotionUiLayerContext,
-} from "@openreel/core/motion/motion-ui-builder";
+} from "@openfield/core/motion/motion-ui-builder";
 import {
   alignMotionLayers,
   distributeMotionLayers,
   type MotionLayerAlignment,
   type MotionLayerDistributionAxis,
-} from "@openreel/core/motion/motion-layout";
+} from "@openfield/core/motion/motion-layout";
 import {
   MOTION_ANIMATION_PRESETS,
   applyMotionAnimationPreset,
   getMotionAnimationPreset,
   canApplyMotionAnimationPreset,
   type MotionAnimationPresetId,
-} from "@openreel/core/motion/motion-animation-presets";
+} from "@openfield/core/motion/motion-animation-presets";
 import {
   createMotionExpression,
   addMotionLayerExpression,
@@ -133,7 +133,7 @@ import {
   toggleMotionLayerExpression,
   getMotionExpressionError,
   evaluateMotionPropertyValueAtTime,
-} from "@openreel/core/motion/motion-expressions";
+} from "@openfield/core/motion/motion-expressions";
 import {
   createMotionEffect,
   createMotionShaderEffect,
@@ -147,7 +147,7 @@ import {
   nextMotionControlName,
   type MotionEffectNumericParameter,
   type MotionEffectParameterName,
-} from "@openreel/core/motion/motion-effects";
+} from "@openfield/core/motion/motion-effects";
 import {
   createMotionMask,
   addMotionLayerMask,
@@ -156,19 +156,19 @@ import {
   upsertMotionMaskPathKeyframe,
   normalizeMaskKeyframeTime,
   transferMotionMaskStack,
-} from "@openreel/core/motion/motion-masks";
+} from "@openfield/core/motion/motion-masks";
 import {
   setMotionLayerTrackMatte,
   clearMotionLayerTrackMatte,
-} from "@openreel/core/motion/motion-track-mattes";
-import { MOTION_BLEND_MODE_OPTIONS } from "@openreel/core/motion/motion-blend-modes";
+} from "@openfield/core/motion/motion-track-mattes";
+import { MOTION_BLEND_MODE_OPTIONS } from "@openfield/core/motion/motion-blend-modes";
 import {
   setMotionLayerParent,
   canParentMotionLayer,
   groupMotionLayers,
   ungroupMotionLayers,
   createMotionNullControllerForLayers,
-} from "@openreel/core/motion/motion-hierarchy";
+} from "@openfield/core/motion/motion-hierarchy";
 import {
   precomposeMotionLayers,
   addMotionComponentInstance,
@@ -177,15 +177,15 @@ import {
   isMotionCompositionLayer,
   getMotionCompositionById,
   MOTION_COMPOSITION_TIME_PROPERTY,
-} from "@openreel/core/motion/motion-precomps";
-import { disintegrateMotionLayer } from "@openreel/core/motion/motion-disintegrate";
-import { morphMotionLayers } from "@openreel/core/motion/motion-morph";
-import { createCursorClick } from "@openreel/core/motion/motion-cursor";
+} from "@openfield/core/motion/motion-precomps";
+import { disintegrateMotionLayer } from "@openfield/core/motion/motion-disintegrate";
+import { morphMotionLayers } from "@openfield/core/motion/motion-morph";
+import { createCursorClick } from "@openfield/core/motion/motion-cursor";
 import {
   setMotionLayersVisible,
   setMotionLayersLocked,
   duplicateMotionLayers,
-} from "@openreel/core/motion/motion-layer-commands";
+} from "@openfield/core/motion/motion-layer-commands";
 import {
   updateMotionCompositionLayerTiming,
   moveMotionLayerInTime,
@@ -194,13 +194,13 @@ import {
   splitMotionLayerAtTime,
   rippleDeleteMotionLayer,
   rippleMotionLayers,
-} from "@openreel/core/motion/motion-layer-timing";
+} from "@openfield/core/motion/motion-layer-timing";
 import {
   createMotionGuide,
   addMotionCompositionGuide,
   moveMotionCompositionGuide,
   removeMotionCompositionGuide,
-} from "@openreel/core/motion/motion-guides";
+} from "@openfield/core/motion/motion-guides";
 import {
   createMotionShapeModifier,
   addMotionShapeModifier,
@@ -210,7 +210,7 @@ import {
   getMotionShapeModifierPropertyDescriptors,
   MOTION_SHAPE_MODIFIER_PROPERTY_NAMES,
   type MotionShapeModifierPropertyName,
-} from "@openreel/core/motion/motion-shape-modifiers";
+} from "@openfield/core/motion/motion-shape-modifiers";
 import {
   getMotionShapeContents,
   hasExplicitShapeContents,
@@ -222,7 +222,7 @@ import {
   moveShapeItem,
   createShapeGroupItem,
   createShapePathItem,
-} from "@openreel/core/motion/motion-shape-contents";
+} from "@openfield/core/motion/motion-shape-contents";
 import {
   createMotionTextAnimator,
   addMotionTextAnimator,
@@ -230,7 +230,7 @@ import {
   toggleMotionTextAnimator,
   getMotionTextShaderAnimator,
   removeMotionTextAnimator,
-} from "@openreel/core/motion/motion-text-animators";
+} from "@openfield/core/motion/motion-text-animators";
 import {
   createDefaultMotionCamera,
   normalizeMotionCamera,
@@ -239,7 +239,7 @@ import {
   isMotionCameraProperty,
   upsertMotionCameraKeyframe,
   type MotionCameraProperty,
-} from "@openreel/core/motion/motion-camera";
+} from "@openfield/core/motion/motion-camera";
 import {
   createMotionLight,
   addMotionCompositionLight,
@@ -250,10 +250,10 @@ import {
   upsertMotionLightKeyframe,
   normalizeMotionLight,
   type MotionLightProperty,
-} from "@openreel/core/motion/motion-lights";
-import { importSvgAsMotionComposition } from "@openreel/core/motion/importers/svg-importer";
-import { importLottieAsMotionComposition } from "@openreel/core/motion/importers/lottie-importer";
-import { importFigmaJsonAsMotionComposition } from "@openreel/core/motion/importers/figma-json-importer";
+} from "@openfield/core/motion/motion-lights";
+import { importSvgAsMotionComposition } from "@openfield/core/motion/importers/svg-importer";
+import { importLottieAsMotionComposition } from "@openfield/core/motion/importers/lottie-importer";
+import { importFigmaJsonAsMotionComposition } from "@openfield/core/motion/importers/figma-json-importer";
 import {
   DEFAULT_MOTION_TRANSFORM,
   MOTION_SHAPE_MODIFIER_TYPES as MOTION_SHAPE_MODIFIER_TYPE_LIST,
@@ -304,13 +304,13 @@ import {
   type MotionScene3DLighting,
   type MotionScene3DRoom,
   type MotionRotation3D,
-} from "@openreel/core/motion/types";
-import type { Keyframe, Marker } from "@openreel/core/types/timeline";
-import { normalizeMotionBlurSettings } from "@openreel/core/motion/motion-blur";
-import type { BlendMode } from "@openreel/core/video/types";
-import type { LottieAnimation } from "@openreel/core/types/lottie";
-import type { MediaItem } from "@openreel/core/types/project";
-import { EASING_TYPES, type EasingType } from "@openreel/core/types/timeline";
+} from "@openfield/core/motion/types";
+import type { Keyframe, Marker } from "@openfield/core/types/timeline";
+import { normalizeMotionBlurSettings } from "@openfield/core/motion/motion-blur";
+import type { BlendMode } from "@openfield/core/video/types";
+import type { LottieAnimation } from "@openfield/core/types/lottie";
+import type { MediaItem } from "@openfield/core/types/project";
+import { EASING_TYPES, type EasingType } from "@openfield/core/types/timeline";
 import type {
   EditingHost,
   JobKind,
@@ -386,7 +386,7 @@ import {
   type CreationProjectState,
   type CreationValidationIssue,
   type Transform3D,
-} from "@openreel/core/creation/index";
+} from "@openfield/core/creation/index";
 
 export type ToolHandler = (
   args: Record<string, unknown>,

@@ -2,15 +2,15 @@ import { describe, it, expect } from "vitest";
 import { HeadlessHost } from "./headless-host";
 import { executeTool } from "./executor";
 import { makeEmptyProject } from "./test-fixtures";
-import { DEFAULT_MOTION_TRANSFORM } from "@openreel/core/motion/types";
-import { createMotionEffect } from "@openreel/core/motion/motion-effects";
+import { DEFAULT_MOTION_TRANSFORM } from "@openfield/core/motion/types";
+import { createMotionEffect } from "@openfield/core/motion/motion-effects";
 import type {
   MotionComposition,
   MotionEffect,
   MotionLayer,
   MotionShapeLayer,
-} from "@openreel/core/motion/types";
-import type { Project } from "@openreel/core/types/project";
+} from "@openfield/core/motion/types";
+import type { Project } from "@openfield/core/types/project";
 
 const COMP_ID = "comp-reorder-ripple";
 

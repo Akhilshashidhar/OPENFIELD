@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftCard as Card } from "@openreel/ui";
-import { ToolcraftCheckboxInput as CheckboxInput } from "@openreel/ui";
-import { ToolcraftIconButton as IconButton } from "@openreel/ui";
-import { ToolcraftNumberInputControl } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftCard as Card } from "@openfield/ui";
+import { ToolcraftCheckboxInput as CheckboxInput } from "@openfield/ui";
+import { ToolcraftIconButton as IconButton } from "@openfield/ui";
+import { ToolcraftNumberInputControl } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import { PropertySlider } from "./shell/PropertySlider";
 import {
   Target,
@@ -22,7 +22,7 @@ import {
   getMotionTrackingBridge,
   type MotionTrackingState,
 } from "../../../bridges/motion-tracking-bridge";
-import type { Rectangle } from "@openreel/core";
+import type { Rectangle } from "@openfield/core";
 
 interface MotionTrackingSectionProps {
   clipId: string;

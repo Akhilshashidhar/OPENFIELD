@@ -19,8 +19,8 @@ import {
   isNeutralLut,
   isNeutralHsl,
   isNeutralColorGrading,
-} from "@openreel/core";
-import type { Effect } from "@openreel/core";
+} from "@openfield/core";
+import type { Effect } from "@openfield/core";
 import { v4 as uuidv4 } from "uuid";
 
 export type EffectsChangeCallback = (clipId: string, effects: Effect[]) => void;

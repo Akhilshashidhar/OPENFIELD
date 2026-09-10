@@ -10,13 +10,13 @@ import {
   Link,
   Sparkles,
 } from "@/icons/lucide-compat";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftIconButton as IconButton } from "@openreel/ui";
-import { ToolcraftNumberInputControl } from "@openreel/ui";
-import { ToolcraftSelectableCard as SelectableCard } from "@openreel/ui";
-import { ToolcraftSelectControl as Selector } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
-import { ToolcraftTextInputControl } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftIconButton as IconButton } from "@openfield/ui";
+import { ToolcraftNumberInputControl } from "@openfield/ui";
+import { ToolcraftSelectableCard as SelectableCard } from "@openfield/ui";
+import { ToolcraftSelectControl as Selector } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
+import { ToolcraftTextInputControl } from "@openfield/ui";
 import { useProjectStore } from "../../../stores/project-store";
 import { useEngineStore } from "../../../stores/engine-store";
 import { toast } from "../../../stores/notification-store";
@@ -39,7 +39,7 @@ import {
   type MultiCamGroup,
   type MulticamEditPolicy,
   type MulticamDecisionStrategy,
-} from "@openreel/core";
+} from "@openfield/core";
 import {
   loadMulticamArtifact,
   saveMulticamArtifact,
@@ -386,7 +386,7 @@ export const MultiCameraPanel: React.FC<MultiCameraPanelProps> = () => {
   const [includeVisualReactions, setIncludeVisualReactions] = useState(false);
   const [policyPreset, setPolicyPreset] = useState("custom");
   const [multiCamEngine, setMultiCamEngine] =
-    useState<import("@openreel/core").MultiCamEngine | null>(null);
+    useState<import("@openfield/core").MultiCamEngine | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -672,7 +672,7 @@ export const MultiCameraPanel: React.FC<MultiCameraPanelProps> = () => {
         }
 
         setStatus(groupId, "Running local Silero voice detection…");
-        const vadTracks = new Map<string, import("@openreel/core").MulticamVadTrack>();
+        const vadTracks = new Map<string, import("@openfield/core").MulticamVadTrack>();
         for (const source of alignedSources) {
           const buffer = buffers.get(source.angle.id);
           if (!buffer) continue;

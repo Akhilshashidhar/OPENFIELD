@@ -125,7 +125,7 @@ export async function uploadAsset(
   const ownerId = userData.user?.id;
   if (!ownerId) return null;
 
-  const safeName = file.name.replace(/[^\w.\-]+/g, "_");
+  const safeName = file.name.replace(/[^\w.-]+/g, "_");
   const path = `${ownerId}/${crypto.randomUUID()}-${safeName}`;
 
   const { error: uploadError } = await supabase.storage

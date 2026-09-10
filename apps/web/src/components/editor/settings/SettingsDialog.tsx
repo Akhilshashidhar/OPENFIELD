@@ -1,8 +1,8 @@
 import React, { useCallback } from "react";
 import { Settings, Key, Plug } from "@/icons/lucide-compat";
-import { Tabs, TabsList, TabsTrigger } from "@openreel/ui";
-import { ToolcraftDialog as Dialog, ToolcraftDialogHeader as DialogHeader } from "@openreel/ui";
-import { ToolcraftLayout as Layout, ToolcraftLayoutContent as LayoutContent } from "@openreel/ui";
+import { Tabs, TabsList, TabsTrigger } from "@openfield/ui";
+import { ToolcraftDialog as Dialog, ToolcraftDialogHeader as DialogHeader } from "@openfield/ui";
+import { ToolcraftLayout as Layout, ToolcraftLayoutContent as LayoutContent } from "@openfield/ui";
 import { useSettingsStore, type SettingsTab } from "../../../stores/settings-store";
 import { GeneralPanel } from "./GeneralPanel";
 import { ApiKeysPanel } from "./ApiKeysPanel";

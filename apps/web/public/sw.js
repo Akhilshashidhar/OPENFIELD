@@ -1,5 +1,5 @@
 /**
- * OpenReel Service Worker
+ * OpenField Service Worker
  *
  * Handles offline functionality by caching application assets.
  * Implements a cache-first strategy for static assets and network-first for API calls.
@@ -10,9 +10,14 @@
  * - 35.4: Inform user that AI requires internet connectivity
  */
 
-const CACHE_NAME = "openreel-v2";
-const STATIC_CACHE_NAME = "openreel-static-v2";
-const DYNAMIC_CACHE_NAME = "openreel-dynamic-v2";
+// OpenField cache namespace. Bumping this (and the legacy-prefix cleanup in the
+// activate handler) evicts any stale OpenReel-era caches so returning visitors
+// never get served the old cached shell.
+const CACHE_PREFIX = "openfield-";
+const LEGACY_CACHE_PREFIXES = ["openreel-"];
+const CACHE_NAME = "openfield-v1";
+const STATIC_CACHE_NAME = "openfield-static-v1";
+const DYNAMIC_CACHE_NAME = "openfield-dynamic-v1";
 
 /**
  * Static assets to cache on install
@@ -109,9 +114,13 @@ self.addEventListener("activate", (event) => {
         return Promise.all(
           cacheNames
             .filter((name) => {
-              // Delete old versions of our caches
+              // Purge ALL legacy OpenReel-era caches outright…
+              if (LEGACY_CACHE_PREFIXES.some((p) => name.startsWith(p))) {
+                return true;
+              }
+              // …and any of our own caches that aren't the current versions.
               return (
-                name.startsWith("openreel-") &&
+                name.startsWith(CACHE_PREFIX) &&
                 name !== STATIC_CACHE_NAME &&
                 name !== DYNAMIC_CACHE_NAME
               );
@@ -287,7 +296,7 @@ async function getCacheStatus() {
   let totalEntries = 0;
 
   for (const name of cacheNames) {
-    if (name.startsWith("openreel-")) {
+    if (name.startsWith(CACHE_PREFIX)) {
       const cache = await caches.open(name);
       const keys = await cache.keys();
       totalEntries += keys.length;
@@ -295,20 +304,24 @@ async function getCacheStatus() {
   }
 
   return {
-    cacheNames: cacheNames.filter((n) => n.startsWith("openreel-")),
+    cacheNames: cacheNames.filter((n) => n.startsWith(CACHE_PREFIX)),
     totalEntries,
     version: CACHE_NAME,
   };
 }
 
 /**
- * Clear all OpenReel caches
+ * Clear all OpenField caches (and any legacy OpenReel-era caches).
  */
 async function clearAllCaches() {
   const cacheNames = await caches.keys();
   await Promise.all(
     cacheNames
-      .filter((name) => name.startsWith("openreel-"))
+      .filter(
+        (name) =>
+          name.startsWith(CACHE_PREFIX) ||
+          LEGACY_CACHE_PREFIXES.some((p) => name.startsWith(p)),
+      )
       .map((name) => caches.delete(name))
   );
 }

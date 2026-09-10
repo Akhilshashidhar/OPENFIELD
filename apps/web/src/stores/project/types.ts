@@ -31,8 +31,8 @@ import type {
   ResolvedEditingTemplateOverlay,
   MotionComposition,
   MotionCompositionInstance,
-} from "@openreel/core";
-import { ActionExecutor, ActionHistory } from "@openreel/core";
+} from "@openfield/core";
+import { ActionExecutor, ActionHistory } from "@openfield/core";
 import type {
   VideoEffect,
   VideoEffectType,
@@ -265,7 +265,7 @@ export interface ProjectState {
     text: string,
     duration?: number,
     style?: Partial<TextStyle>,
-    metadata?: import("@openreel/core").ClipMetadata,
+    metadata?: import("@openfield/core").ClipMetadata,
   ) => TextClip | null;
   updateTextContent: (clipId: string, text: string) => TextClip | null;
   updateTextStyle: (
@@ -286,7 +286,7 @@ export interface ProjectState {
   ) => TextClip | null;
   updateText3D: (
     clipId: string,
-    text3d: import("@openreel/core").Text3DSettings | undefined,
+    text3d: import("@openfield/core").Text3DSettings | undefined,
   ) => TextClip | null;
   getTextClip: (clipId: string) => TextClip | undefined;
   getAllTextClips: () => TextClip[];
@@ -307,7 +307,7 @@ export interface ProjectState {
 
   addSubtitle: (
     subtitle: Subtitle,
-    metadata?: import("@openreel/core").ClipMetadata,
+    metadata?: import("@openfield/core").ClipMetadata,
   ) => Promise<void>;
   removeSubtitle: (subtitleId: string) => void;
   updateSubtitle: (subtitleId: string, updates: Partial<Subtitle>) => void;

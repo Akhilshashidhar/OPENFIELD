@@ -1,7 +1,7 @@
 import type { JSX } from "react";
 import { useEffect, useState } from "react";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import type { OpenReelUpdaterStatus } from "../types/global";
 
 // Notify → (consented) download → install. Subscribes to main-process update

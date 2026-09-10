@@ -19,20 +19,14 @@
     "sourceMap": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@openreel/core": ["./packages/core/src/index.ts"],
-      "@openreel/core/*": ["./packages/core/src/*"],
-      "@openreel/agent": ["./packages/agent/src/index.ts"],
-      "@openreel/agent/*": ["./packages/agent/src/*"],
-      "@openreel/creation-bindings": ["./packages/creation-bindings/src/index.ts"],
-      "@openreel/creation-bindings/*": ["./packages/creation-bindings/src/*"],
-      "@openreel/creation-agent": ["./packages/creation-agent/src/index.ts"],
-      "@openreel/creation-agent/*": ["./packages/creation-agent/src/*"],
-      "@openreel/creation-schema": ["./packages/creation-schema/src/index.ts"],
-      "@openreel/creation-schema/*": ["./packages/creation-schema/src/*"],
-      "@openreel/image-core": ["./packages/image-core/src/index.ts"],
-      "@openreel/image-core/*": ["./packages/image-core/src/*"],
-      "@openreel/ui": ["./packages/ui/src/index.ts"],
-      "@openreel/ui/*": ["./packages/ui/src/*"]
+      "@openfield/core": ["./packages/core/src/index.ts"],
+      "@openfield/core/*": ["./packages/core/src/*"],
+      "@openfield/agent": ["./packages/agent/src/index.ts"],
+      "@openfield/agent/*": ["./packages/agent/src/*"],
+      "@openfield/creation-schema": ["./packages/creation-schema/src/index.ts"],
+      "@openfield/creation-schema/*": ["./packages/creation-schema/src/*"],
+      "@openfield/ui": ["./packages/ui/src/index.ts"],
+      "@openfield/ui/*": ["./packages/ui/src/*"]
     }
   },
   "exclude": ["node_modules", "dist", "build"]

@@ -49,8 +49,8 @@ import {
   type MotionMaskPropertyName,
   type MotionMaskShape,
   type MotionTrackMatteType,
-} from "@openreel/core";
-import { ToolcraftClickableCard, ToolcraftText } from "@openreel/ui";
+} from "@openfield/core";
+import { ToolcraftClickableCard, ToolcraftText } from "@openfield/ui";
 import { useProjectStore } from "../../stores/project-store";
 import { useMotionStore } from "../stores/motion-store";
 import {

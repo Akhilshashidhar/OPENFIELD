@@ -1,6 +1,6 @@
-import type { Effect } from "@openreel/core";
-import { AudioEffectsEngine, getAudioEffectsEngine } from "@openreel/core";
-import type { EQBand } from "@openreel/core";
+import type { Effect } from "@openfield/core";
+import { AudioEffectsEngine, getAudioEffectsEngine } from "@openfield/core";
+import type { EQBand } from "@openfield/core";
 import { useProjectStore } from "../stores/project-store";
 
 /**

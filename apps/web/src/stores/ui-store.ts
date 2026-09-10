@@ -591,7 +591,7 @@ export const useUIStore = create<UIState>()(
         },
       }),
       {
-        name: "openreel-ui-preferences",
+        name: "openfield-ui-preferences",
         version: 2,
         migrate: (persisted: unknown, version: number) => {
           const state = persisted as Record<string, unknown>;

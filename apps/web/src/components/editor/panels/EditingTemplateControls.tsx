@@ -1,10 +1,10 @@
 import React from "react";
-import { ToolcraftSwitchControl } from "@openreel/ui";
-import { ToolcraftSelectControl as Selector } from "@openreel/ui";
-import { ToolcraftSliderControl } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
-import { ToolcraftTextInputControl } from "@openreel/ui";
-import type { EditingTemplate, EditingTemplatePrimitive } from "@openreel/core";
+import { ToolcraftSwitchControl } from "@openfield/ui";
+import { ToolcraftSelectControl as Selector } from "@openfield/ui";
+import { ToolcraftSliderControl } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
+import { ToolcraftTextInputControl } from "@openfield/ui";
+import type { EditingTemplate, EditingTemplatePrimitive } from "@openfield/core";
 
 export const getEditingTemplateDefaultControlValues = (
   template: EditingTemplate,

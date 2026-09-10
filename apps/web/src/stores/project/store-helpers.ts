@@ -7,7 +7,7 @@ import type {
   TextClip,
   SVGClip,
   StickerClip,
-} from "@openreel/core";
+} from "@openfield/core";
 import {
   calculateProjectDuration,
   getSpeedEngine,
@@ -15,7 +15,7 @@ import {
   multicamEngine,
   getNestedSequenceEngine,
   withUniversalTracksCapability,
-} from "@openreel/core";
+} from "@openfield/core";
 import type { ProjectState } from "../project-store";
 import type { ClipHistoryEntryType } from "./index";
 import { useEngineStore } from "../engine-store";

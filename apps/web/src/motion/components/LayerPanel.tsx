@@ -42,7 +42,7 @@ import {
   Box,
   type LucideIcon,
 } from "@/icons/lucide-compat";
-import { ToolcraftTextInputControl } from "@openreel/ui";
+import { ToolcraftTextInputControl } from "@openfield/ui";
 import {
   alignMotionLayers,
   canNestMotionComposition,
@@ -78,7 +78,7 @@ import {
   type MotionLayerDistributionAxis,
   type MotionLayer,
   type MotionLayerType,
-} from "@openreel/core";
+} from "@openfield/core";
 import { useProjectStore } from "../../stores/project-store";
 import { useMotionStore } from "../stores/motion-store";
 import { formatMotionTimecode } from "../motion-timecode";

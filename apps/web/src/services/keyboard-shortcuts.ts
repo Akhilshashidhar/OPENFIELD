@@ -413,9 +413,11 @@ const DEFAULT_SHORTCUTS: ShortcutDefinition[] = [
 
 const PRESETS: ShortcutPreset[] = [
   {
+    // id kept stable ("openreel") so existing users' saved preset choice isn't
+    // orphaned; only the user-facing label is rebranded to OpenField.
     id: "openreel",
-    name: "OpenReel Default",
-    description: "Default OpenReel shortcuts",
+    name: "OpenField Default",
+    description: "Default OpenField shortcuts",
     shortcuts: {},
   },
   {

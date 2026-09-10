@@ -3,14 +3,14 @@ import { Eye, EyeOff, Volume2, VolumeX, Lock, Trash2, Pencil, AlignLeft, Link2, 
 import {
   ToolcraftContextMenu as ContextMenu,
   type ToolcraftContextMenuOption as ContextMenuOption,
-} from "@openreel/ui";
-import { ToolcraftTextInputControl } from "@openreel/ui";
-import type { Track } from "@openreel/core";
+} from "@openfield/ui";
+import { ToolcraftTextInputControl } from "@openfield/ui";
+import type { Track } from "@openfield/core";
 import {
   getTrackItems,
   trackHasAudioItems,
   trackHasVisualItems,
-} from "@openreel/core";
+} from "@openfield/core";
 import { useProjectStore } from "../../../stores/project-store";
 import { useTimelineStore } from "../../../stores/timeline-store";
 import { getTrackInfo } from "./utils";

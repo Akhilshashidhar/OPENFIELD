@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Monitor } from "@/icons/lucide-compat";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import { OpenFieldLogo } from "./brand/OpenFieldLogo";
 
 export function MobileBlocker() {

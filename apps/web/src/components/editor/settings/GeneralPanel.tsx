@@ -1,11 +1,11 @@
 import React, { useCallback } from "react";
-import { ToolcraftSwitchControl } from "@openreel/ui";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftClickableCard as ClickableCard } from "@openreel/ui";
-import { ToolcraftNumberInputControl } from "@openreel/ui";
-import { ToolcraftSelectControl as Selector } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
-import { ToolcraftTextInputControl as TextInput } from "@openreel/ui";
+import { ToolcraftSwitchControl } from "@openfield/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftClickableCard as ClickableCard } from "@openfield/ui";
+import { ToolcraftNumberInputControl } from "@openfield/ui";
+import { ToolcraftSelectControl as Selector } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
+import { ToolcraftTextInputControl as TextInput } from "@openfield/ui";
 import { useSettingsStore, SERVICE_REGISTRY, type TtsProvider, type LlmProvider, type AggregatorProvider } from "../../../stores/settings-store";
 import { useProjectStore } from "../../../stores/project-store";
 import { EDITING_FRAME_RATE_OPTIONS } from "../editing-frame-rate";

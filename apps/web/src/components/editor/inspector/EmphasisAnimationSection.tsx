@@ -1,12 +1,12 @@
 import React, { useCallback, useMemo } from "react";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftClickableCard as ClickableCard } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftClickableCard as ClickableCard } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import { RotateCcw, Target, Zap, Clock } from "@/icons/lucide-compat";
 import { MockSlider, MockToggle } from "./shell/InspectorControls";
 import { useProjectStore } from "../../../stores/project-store";
 import { useEngineStore } from "../../../stores/engine-store";
-import type { EmphasisAnimation, EmphasisAnimationType } from "@openreel/core";
+import type { EmphasisAnimation, EmphasisAnimationType } from "@openfield/core";
 
 const formatTime = (seconds: number): string => {
   const mins = Math.floor(seconds / 60);

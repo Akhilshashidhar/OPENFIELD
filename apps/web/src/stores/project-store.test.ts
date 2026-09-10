@@ -7,12 +7,12 @@ import type {
   MediaItem,
   MotionShaderDef,
   Transition,
-} from "@openreel/core";
+} from "@openfield/core";
 import {
   clearGeneratedMotionShaders,
   getMotionShaderDef,
   listGeneratedMotionShaders,
-} from "@openreel/core/motion/shaders";
+} from "@openfield/core/motion/shaders";
 import { createEmptyProject } from "./project/project-helpers";
 
 const {

@@ -5,8 +5,8 @@ import {
   isExpensive,
   toMcpTools,
   type ToolResult,
-} from "@openreel/agent";
-import type { MotionComposition } from "@openreel/core";
+} from "@openfield/agent";
+import type { MotionComposition } from "@openfield/core";
 import { getLiveEditorHost, runExclusive } from "./host-singleton";
 import { useSettingsStore } from "../../stores/settings-store";
 import { useMotionStore } from "../../motion/stores/motion-store";

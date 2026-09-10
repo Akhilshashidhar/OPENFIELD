@@ -4,7 +4,7 @@ import {
   type VideoExportSettings,
   type ExportResult,
   type Project,
-} from "@openreel/core";
+} from "@openfield/core";
 
 export interface ExportRunnerState {
   isExporting: boolean;
@@ -102,7 +102,7 @@ function triggerAnchorDownload(data: Blob, filename: string, onRelease?: () => v
   );
 }
 
-const OPFS_TMP_PREFIX = ".openreel-export-";
+const OPFS_TMP_PREFIX = ".openfield-export-";
 const OPFS_TMP_TTL_MS = 60 * 60 * 1000;
 
 type OpfsWriteHandle = FileSystemFileHandle & {

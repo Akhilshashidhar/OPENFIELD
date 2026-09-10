@@ -1,11 +1,11 @@
-import type { JobResult, MulticamHostBridge } from "@openreel/agent";
+import type { JobResult, MulticamHostBridge } from "@openfield/agent";
 import {
   DEFAULT_MULTICAM_SHOT_POLICY,
   incorporateMulticamReactionCues,
   planMulticamShots,
   type MultiCamGroup,
   type MulticamShotPolicy,
-} from "@openreel/core";
+} from "@openfield/core";
 import { useProjectStore } from "../../stores/project-store";
 import { useEngineStore } from "../../stores/engine-store";
 import { loadMulticamArtifact } from "../multicam-analysis-store";
@@ -13,7 +13,7 @@ import {
   createMulticamApplyTracksAction,
   resolveMulticamSources,
 } from "../../components/editor/inspector/multicam-workflow";
-import { extractMulticamSocialClips } from "@openreel/core";
+import { extractMulticamSocialClips } from "@openfield/core";
 
 function selectGroup(groupId?: string): MultiCamGroup {
   const groups = useProjectStore.getState().project.multicamGroups ?? [];

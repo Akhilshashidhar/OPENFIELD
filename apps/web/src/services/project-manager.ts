@@ -1,5 +1,5 @@
-import type { Project, ProjectSettings } from "@openreel/core";
-import { normalizeProjectStoredFields } from "@openreel/core";
+import type { Project, ProjectSettings } from "@openfield/core";
+import { normalizeProjectStoredFields } from "@openfield/core";
 import { v4 as uuidv4 } from "uuid";
 
 interface FilePickerAcceptType {
@@ -46,7 +46,7 @@ function isNativeRef(ref: unknown): ref is NativeFileRef {
   );
 }
 
-const PROJECT_DB_NAME = "openreel-projects";
+const PROJECT_DB_NAME = "openfield-projects";
 const PROJECT_DB_VERSION = 1;
 const PROJECTS_STORE = "projects";
 const RECENT_STORE = "recent";

@@ -11,7 +11,7 @@ export default {
   theme: {
     extend: {
       colors: {
-        // ── v2 editor tokens (cinematic, emerald)
+        // ── v2 editor tokens (monochrome black/white brand)
         //   These read raw oklch via CSS variables. Opacity modifiers
         //   are not supported on these — use the *-soft / *-glow
         //   companion tokens (or arbitrary values) when you need a tint.

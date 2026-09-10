@@ -121,7 +121,7 @@ function assertReaderCompatibility(projectFile: ProjectFile): void {
     compareVersions(minimumReaderVersion, SCHEMA_VERSION) > 0
   ) {
     throw new Error(
-      `This project requires OpenReel project reader ${minimumReaderVersion} or newer. Current reader: ${SCHEMA_VERSION}.`,
+      `This project requires OpenField project reader ${minimumReaderVersion} or newer. Current reader: ${SCHEMA_VERSION}.`,
     );
   }
 }

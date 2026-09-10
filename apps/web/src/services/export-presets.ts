@@ -1,4 +1,4 @@
-import type { ExportPreset, AudioExportSettings } from "@openreel/core";
+import type { ExportPreset, AudioExportSettings } from "@openfield/core";
 
 export interface PlatformExportPreset extends ExportPreset {
   platform: string;
@@ -770,7 +770,7 @@ export const ALL_EXPORT_PRESETS: PlatformExportPreset[] = [
   ...AUDIO_PRESETS,
 ];
 
-const CUSTOM_PRESETS_KEY = "openreel-custom-export-presets";
+const CUSTOM_PRESETS_KEY = "openfield-custom-export-presets";
 
 class ExportPresetsManager {
   private customPresets: PlatformExportPreset[] = [];

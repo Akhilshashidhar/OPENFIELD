@@ -4,13 +4,13 @@ import type {
   MotionLayer,
   MotionShaderEffect,
   MotionShapeLayer,
-} from "@openreel/core";
+} from "@openfield/core";
 import {
   addMotionTextAnimator,
   createDefaultMotionShaderFill,
   createMotionTextAnimator,
-} from "@openreel/core";
-import type { MotionTextAnimator, MotionTextLayer } from "@openreel/core";
+} from "@openfield/core";
+import type { MotionTextAnimator, MotionTextLayer } from "@openfield/core";
 import { createMotionLayerOfType } from "../motion-layer-factory";
 import {
   compositionHasMotionShaderLayers,

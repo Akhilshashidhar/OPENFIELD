@@ -9,10 +9,10 @@ import { useProjectStore } from "../../stores/project-store";
 import { ChannelStrip } from "./ChannelStrip";
 import type { ChannelStripState } from "./types";
 import { volumeToDb, formatDb } from "./types";
-import { getRealtimeAudioGraph, trackHasAudioItems } from "@openreel/core";
-import { ToolcraftIconButton as IconButton } from "@openreel/ui";
-import { ToolcraftSlider as Slider } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
+import { getRealtimeAudioGraph, trackHasAudioItems } from "@openfield/core";
+import { ToolcraftIconButton as IconButton } from "@openfield/ui";
+import { ToolcraftSlider as Slider } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import { X } from "@/icons/lucide-compat";
 
 export interface AudioMixerProps {

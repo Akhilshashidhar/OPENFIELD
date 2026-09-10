@@ -1,4 +1,4 @@
-import type { Project } from "@openreel/core/types/project";
+import type { Project } from "@openfield/core/types/project";
 
 /**
  * Compact, token-efficient, blob-free views of the project for the agent's read

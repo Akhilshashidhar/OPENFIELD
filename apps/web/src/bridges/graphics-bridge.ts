@@ -13,7 +13,7 @@ import {
   type StickerItem,
   type EmojiItem,
   DEFAULT_SHAPE_STYLE,
-} from "@openreel/core";
+} from "@openfield/core";
 
 export interface GraphicsOperationResult {
   success: boolean;

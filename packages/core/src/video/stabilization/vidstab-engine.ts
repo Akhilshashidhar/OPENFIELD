@@ -22,9 +22,16 @@ type FFmpegInstance = {
   terminate(): void;
 };
 
+// Base URL that serves the ffmpeg-vidstab core (mt/st builds), configured via
+// VITE_VIDSTAB_URL. No OpenReel fallback: if unset, stabilization fails with a
+// clear error rather than calling OpenReel infrastructure. Expected layout:
+//   <base>/mt  and  <base>/st
+const VIDSTAB_BASE =
+  ((import.meta as unknown as { env?: Record<string, string | undefined> }).env
+    ?.VITE_VIDSTAB_URL as string | undefined) || "";
 const VIDSTAB_CORE_CDN = {
-  mt: "https://mediashares.openreel.video/ffmpeg-vidstab/mt",
-  st: "https://mediashares.openreel.video/ffmpeg-vidstab/st",
+  mt: VIDSTAB_BASE ? `${VIDSTAB_BASE}/mt` : "",
+  st: VIDSTAB_BASE ? `${VIDSTAB_BASE}/st` : "",
 };
 
 export type VidstabProgress = {
@@ -59,6 +66,13 @@ export class VidstabEngine {
         typeof crossOriginIsolated !== "undefined" && crossOriginIsolated;
 
       const baseURL = useMultiThread ? VIDSTAB_CORE_CDN.mt : VIDSTAB_CORE_CDN.st;
+
+      if (!baseURL) {
+        throw new Error(
+          "Video stabilization is not configured: set VITE_VIDSTAB_URL to a host " +
+            "serving the ffmpeg-vidstab core (mt/st) — see .env.example / docs.",
+        );
+      }
 
       if (useMultiThread) {
         const [coreURL, wasmURL, workerURL] = await Promise.all([

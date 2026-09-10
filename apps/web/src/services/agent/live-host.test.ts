@@ -1,7 +1,7 @@
 import { describe, it, expect, beforeEach } from "vitest";
-import type { Action } from "@openreel/core";
-import { executeTool } from "@openreel/agent";
-import type { EditorStateView } from "@openreel/agent";
+import type { Action } from "@openfield/core";
+import { executeTool } from "@openfield/agent";
+import type { EditorStateView } from "@openfield/agent";
 import { useProjectStore } from "../../stores/project-store";
 import { LiveEditorHost } from "./live-host";
 

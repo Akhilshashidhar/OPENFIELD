@@ -1,4 +1,4 @@
-import type { Track } from "@openreel/core";
+import type { Track } from "@openfield/core";
 
 export type TrackLayerFilter = "all" | Track["type"];
 

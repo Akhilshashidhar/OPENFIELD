@@ -36,20 +36,20 @@ import {
   VolumeX,
   Pencil,
 } from "@/icons/lucide-compat";
-import { ToolcraftIconButton as IconButton } from "@openreel/ui";
+import { ToolcraftIconButton as IconButton } from "@openfield/ui";
 import {
   ToolcraftDropdownMenu as DropdownMenu,
   type ToolcraftDropdownMenuOption as DropdownMenuOption,
   ToolcraftPopover as Popover,
   ToolcraftText as Text,
-} from "@openreel/ui";
+} from "@openfield/ui";
 import { useProjectStore } from "../../stores/project-store";
 import { useTimelineStore, ZOOM_PRESETS } from "../../stores/timeline-store";
 import { useUIStore } from "../../stores/ui-store";
 import { toast } from "../../stores/notification-store";
 import { useEngineStore } from "../../stores/engine-store";
 import { getPlaybackBridge } from "../../bridges/playback-bridge";
-import { trackHasAudioItems, trackHasVisualItems } from "@openreel/core";
+import { trackHasAudioItems, trackHasVisualItems } from "@openfield/core";
 import {
   deleteTimelineItem,
   duplicateTimelineItem,

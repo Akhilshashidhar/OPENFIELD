@@ -7,7 +7,7 @@ import {
   ToolcraftSelectControl as Selector,
   ToolcraftText as Text,
   ToolcraftTextInputControl as TextInput,
-} from "@openreel/ui";
+} from "@openfield/ui";
 import { Settings2 } from "@/icons/lucide-compat";
 import {
   useSettingsStore,

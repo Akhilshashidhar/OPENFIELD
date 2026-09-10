@@ -1,5 +1,5 @@
 import React from "react";
-import type { ToolcraftContextMenuOption as ContextMenuOption } from "@openreel/ui";
+import type { ToolcraftContextMenuOption as ContextMenuOption } from "@openfield/ui";
 import {
   Layers,
   Trash2,
@@ -7,7 +7,7 @@ import {
   Type,
   ListChecks,
 } from "@/icons/lucide-compat";
-import type { ShapeClip, SVGClip, StickerClip, TextClip } from "@openreel/core";
+import type { ShapeClip, SVGClip, StickerClip, TextClip } from "@openfield/core";
 import { useProjectStore } from "../../../stores/project-store";
 import { useUIStore } from "../../../stores/ui-store";
 import { getTimelineTrackSelection } from "../../../utils/timeline-item-actions";

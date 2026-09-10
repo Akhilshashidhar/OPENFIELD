@@ -1,5 +1,5 @@
-import { StorageEngine } from "@openreel/core";
-import type { MediaRecord, MediaMetadata } from "@openreel/core";
+import { StorageEngine } from "@openfield/core";
+import type { MediaRecord, MediaMetadata } from "@openfield/core";
 
 const storage = new StorageEngine();
 
@@ -79,7 +79,15 @@ export async function getStorageStats(): Promise<{
 export async function clearAllStorage(): Promise<void> {
   await storage.clearAllData();
 
-  const databasesToDelete = ["openreel-autosave", "openreel-projects", "openreel-templates"];
+  const databasesToDelete = [
+    "openfield-autosave",
+    "openfield-projects",
+    "openfield-templates",
+    // legacy OpenReel-era DBs (cleared too, in case migration hasn't run)
+    "openreel-autosave",
+    "openreel-projects",
+    "openreel-templates",
+  ];
   await Promise.allSettled(
     databasesToDelete.map(
       (dbName) =>

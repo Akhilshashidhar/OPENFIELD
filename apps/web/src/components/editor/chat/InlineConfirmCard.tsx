@@ -1,8 +1,8 @@
 import type { JSX } from "react";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import { AlertTriangle } from "@/icons/lucide-compat";
-import type { ToolCall } from "@openreel/agent";
+import type { ToolCall } from "@openfield/agent";
 import { useChatStore } from "../../../stores/chat-store";
 
 export function InlineConfirmCard({ call }: { call: ToolCall }): JSX.Element {

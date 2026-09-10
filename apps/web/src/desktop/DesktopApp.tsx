@@ -16,7 +16,7 @@ import { createExportJobRunner } from "../services/agent/export-job-runner";
 import { useUIStore } from "../stores/ui-store";
 import { useSettingsStore } from "../stores/settings-store";
 import { SettingsDialog } from "../components/editor/settings/SettingsDialog";
-import { ToolcraftButton as Button } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
 import { Settings, Sparkles } from "@/icons/lucide-compat";
 import "./theme/desktop-theme.css";
 

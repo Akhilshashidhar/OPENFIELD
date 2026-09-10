@@ -1,5 +1,5 @@
 import React from "react";
-import { ToolcraftPanelSection } from "@openreel/ui";
+import { ToolcraftPanelSection } from "@openfield/ui";
 
 export interface InspectorSectionProps {
   title: string;

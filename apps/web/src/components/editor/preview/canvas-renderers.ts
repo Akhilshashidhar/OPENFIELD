@@ -16,7 +16,7 @@ import {
   type TransitionEdge,
   resolveCanvasFitDimensions,
   type Clip,
-} from "@openreel/core";
+} from "@openfield/core";
 import * as THREE from "three";
 
 type GraphicClipUnion = ShapeClip | SVGClip | StickerClip;

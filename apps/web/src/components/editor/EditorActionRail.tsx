@@ -3,7 +3,7 @@ import {
   ToolcraftDropdownMenu as DropdownMenu,
   ToolcraftIconButton as IconButton,
   ToolcraftTooltip as Tooltip,
-} from "@openreel/ui";
+} from "@openfield/ui";
 import { Icon } from "@/icons/Icon";
 import {
   House,

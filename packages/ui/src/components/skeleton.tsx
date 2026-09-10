@@ -1,4 +1,4 @@
-import { cn } from "@openreel/ui/lib/utils"
+import { cn } from "@openfield/ui/lib/utils"
 
 function Skeleton({
   className,

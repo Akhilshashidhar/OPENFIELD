@@ -1,4 +1,4 @@
-import type { MotionShapePathPoint, MotionVector2 } from "@openreel/core";
+import type { MotionShapePathPoint, MotionVector2 } from "@openfield/core";
 
 export function penAddCorner(
   points: readonly MotionShapePathPoint[],

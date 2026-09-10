@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { deriveSourceExportMatch } from "./export-source-match";
-import type { Project } from "@openreel/core";
+import type { Project } from "@openfield/core";
 
 interface ItemSpec {
   id?: string;

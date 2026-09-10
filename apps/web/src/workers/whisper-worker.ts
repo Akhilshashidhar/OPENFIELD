@@ -8,11 +8,17 @@ import {
   type WhisperModelKey,
 } from "./whisper-models";
 
-const MODEL_HOST = "https://media.openreel.video/models/";
+// Host for the Whisper caption ONNX models. Configure via VITE_WHISPER_MODEL_URL
+// (e.g. your own R2/CDN bucket that mirrors the ONNX-community Whisper models).
+// There is intentionally NO OpenReel fallback — if this is unset, AI captions
+// fail with a clear, actionable error instead of calling OpenReel infrastructure.
+const MODEL_HOST = (import.meta.env.VITE_WHISPER_MODEL_URL as string | undefined) || "";
 
 env.allowLocalModels = false;
 env.allowRemoteModels = true;
-env.remoteHost = MODEL_HOST;
+if (MODEL_HOST) {
+  env.remoteHost = MODEL_HOST;
+}
 env.remotePathTemplate = "{model}/resolve/{revision}/";
 env.useBrowserCache = true;
 
@@ -125,6 +131,12 @@ self.onmessage = async (
     ? event.data.model
     : DEFAULT_WHISPER_MODEL;
   try {
+    if (!MODEL_HOST) {
+      throw new Error(
+        "AI captions are not configured: set VITE_WHISPER_MODEL_URL to a host " +
+          "that serves the Whisper ONNX models (see .env.example / docs).",
+      );
+    }
     const { transcriber, backend } = await loadModel(requestId, modelKey);
     if (type === "load") {
       post(requestId, { type: "ready", model: modelKey, backend });

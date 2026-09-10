@@ -4,7 +4,7 @@ import {
   type Project,
   type ProjectSettings,
   type Timeline,
-} from "@openreel/core";
+} from "@openfield/core";
 import { generateProjectName } from "../../utils/project-names";
 
 export const DEFAULT_PROJECT_SETTINGS: ProjectSettings = {

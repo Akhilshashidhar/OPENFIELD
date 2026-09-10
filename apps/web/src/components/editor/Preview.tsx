@@ -21,9 +21,9 @@ import {
   Proportions,
   Magnet,
 } from "@/icons/lucide-compat";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftIconButton as IconButton } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftIconButton as IconButton } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import { useProjectStore } from "../../stores/project-store";
 import { useTimelineStore } from "../../stores/timeline-store";
 import { useUIStore } from "../../stores/ui-store";
@@ -63,7 +63,7 @@ import {
   getMediaItemCapabilities,
   getVisibleTrackRenderOrder,
   trackHasAudioItems,
-} from "@openreel/core";
+} from "@openfield/core";
 import { useEngineStore } from "../../stores/engine-store";
 import {
   type HandlePosition,
@@ -105,12 +105,12 @@ import {
   createMotionAwareOcclusionMask,
   getStabilizedTransform,
   getVidstabEngine,
-} from "@openreel/core";
+} from "@openfield/core";
 import type {
   GSAPMotionPathPoint,
   MotionPathConfig,
   SegmentationResult,
-} from "@openreel/core";
+} from "@openfield/core";
 
 interface GPULayer {
   bitmap: ImageBitmap;
@@ -880,7 +880,7 @@ export const Preview: React.FC = () => {
     audioTrackIndex: number = 0,
   ): Promise<AudioBuffer | null> => {
     try {
-      const { extractAudioWav } = await import("@openreel/core/media");
+      const { extractAudioWav } = await import("@openfield/core/media");
       const wavBlob = await extractAudioWav(blob, audioTrackIndex);
       const arrayBuffer = await wavBlob.arrayBuffer();
       return await audioContext.decodeAudioData(arrayBuffer);

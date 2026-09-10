@@ -1,14 +1,14 @@
 import { useState, useCallback } from "react";
 import { Upload, Cloud, HardDrive, Check, AlertCircle } from "@/icons/lucide-compat";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftCard as Card } from "@openreel/ui";
-import { ToolcraftDialog as Dialog, ToolcraftDialogHeader as DialogHeader } from "@openreel/ui";
-import { ToolcraftLayout as Layout, ToolcraftLayoutContent as LayoutContent, ToolcraftLayoutFooter as LayoutFooter } from "@openreel/ui";
-import { ToolcraftSelectableCard as SelectableCard } from "@openreel/ui";
-import { ToolcraftSelectControl as Selector } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
-import { ToolcraftTextAreaControl } from "@openreel/ui";
-import { ToolcraftTextInputControl } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftCard as Card } from "@openfield/ui";
+import { ToolcraftDialog as Dialog, ToolcraftDialogHeader as DialogHeader } from "@openfield/ui";
+import { ToolcraftLayout as Layout, ToolcraftLayoutContent as LayoutContent, ToolcraftLayoutFooter as LayoutFooter } from "@openfield/ui";
+import { ToolcraftSelectableCard as SelectableCard } from "@openfield/ui";
+import { ToolcraftSelectControl as Selector } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
+import { ToolcraftTextAreaControl } from "@openfield/ui";
+import { ToolcraftTextInputControl } from "@openfield/ui";
 import { useProjectStore } from "../../stores/project-store";
 import { useEngineStore } from "../../stores/engine-store";
 import {
@@ -19,7 +19,7 @@ import {
   type ShapeClip,
   type SVGClip,
   type StickerClip,
-} from "@openreel/core";
+} from "@openfield/core";
 import { templateCloudService } from "../../services/template-cloud-service";
 
 interface TemplateWithGraphics extends Template {

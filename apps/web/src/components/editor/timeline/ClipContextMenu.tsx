@@ -1,5 +1,5 @@
 import React from "react";
-import type { ToolcraftContextMenuOption as ContextMenuOption } from "@openreel/ui";
+import type { ToolcraftContextMenuOption as ContextMenuOption } from "@openfield/ui";
 import {
   Copy,
   Layers,
@@ -13,7 +13,7 @@ import {
   ArrowLeftToLine,
   ListChecks,
 } from "@/icons/lucide-compat";
-import type { Clip, Track } from "@openreel/core";
+import type { Clip, Track } from "@openfield/core";
 import { useProjectStore } from "../../../stores/project-store";
 import { useTimelineStore } from "../../../stores/timeline-store";
 import { useUIStore } from "../../../stores/ui-store";

@@ -5,14 +5,14 @@ import {
   toOpenAITools,
   buildSystemPrompt,
   selectToolsForPrompt,
-} from "@openreel/agent";
+} from "@openfield/agent";
 import type {
   AgentEvent,
   ConfirmDecision,
   ToolCall,
   ToolResult,
   LoopMessage,
-} from "@openreel/agent";
+} from "@openfield/agent";
 import { isSessionUnlocked, getSecret } from "../services/secure-storage";
 import { getLiveEditorHost, runExclusive } from "../services/agent/host-singleton";
 import { makeBYOKClient } from "../services/agent/llm-transport";

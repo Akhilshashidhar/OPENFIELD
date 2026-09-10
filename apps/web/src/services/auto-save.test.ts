@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import type { Project } from "@openreel/core";
+import type { Project } from "@openfield/core";
 import {
   AutoSaveManager,
   serializeProjectForAutoSave,

@@ -10,7 +10,7 @@
  * - A verification hash is stored to validate the master password
  */
 
-const SECURE_DB_NAME = "openreel-secure";
+const SECURE_DB_NAME = "openfield-secure";
 const SECURE_DB_VERSION = 1;
 const STORE_SECRETS = "secrets";
 const STORE_META = "meta";

@@ -11,7 +11,7 @@ import {
   type BrushStroke,
   type BrushPoint,
   type CloneSource,
-} from "@openreel/core";
+} from "@openfield/core";
 
 /**
  * Result of photo operations

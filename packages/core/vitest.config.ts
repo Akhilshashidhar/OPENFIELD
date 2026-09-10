@@ -13,7 +13,7 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      "@openreel/core": path.resolve(__dirname, "./src"),
+      "@openfield/core": path.resolve(__dirname, "./src"),
     },
   },
 });

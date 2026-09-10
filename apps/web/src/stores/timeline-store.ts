@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { persist, subscribeWithSelector } from "zustand/middleware";
 
-export const TIMELINE_WORKSPACE_STORAGE_KEY = "openreel-timeline-workspace";
+export const TIMELINE_WORKSPACE_STORAGE_KEY = "openfield-timeline-workspace";
 
 export const ZOOM_PRESETS = {
   MIN: 10,

@@ -1,12 +1,12 @@
 import React, { useCallback, useMemo, useState } from "react";
-import { ToolcraftSegmentedControl } from "@openreel/ui";
-import { ToolcraftCard as Card } from "@openreel/ui";
-import { ToolcraftFileDropControl as FileInput } from "@openreel/ui";
-import { ToolcraftIconButton as IconButton } from "@openreel/ui";
-import { ToolcraftNumberInputControl } from "@openreel/ui";
-import { ToolcraftSelectControl as Selector } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
-import { ToolcraftTextAreaControl } from "@openreel/ui";
+import { ToolcraftSegmentedControl } from "@openfield/ui";
+import { ToolcraftCard as Card } from "@openfield/ui";
+import { ToolcraftFileDropControl as FileInput } from "@openfield/ui";
+import { ToolcraftIconButton as IconButton } from "@openfield/ui";
+import { ToolcraftNumberInputControl } from "@openfield/ui";
+import { ToolcraftSelectControl as Selector } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
+import { ToolcraftTextAreaControl } from "@openfield/ui";
 import {
   AlignLeft,
   AlignCenter,
@@ -25,13 +25,13 @@ import type {
   TextShaderStyle,
   TextStyle,
   FontWeight,
-} from "@openreel/core";
+} from "@openfield/core";
 import {
   getMotionShaderDef,
   getMotionShaderEffectDefs,
   getMotionShaderFillDefs,
   getMotionShaderTextDefs,
-} from "@openreel/core";
+} from "@openfield/core";
 import {
   FONT_CATEGORIES,
   FONT_FILE_ACCEPT,

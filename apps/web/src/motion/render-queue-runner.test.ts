@@ -1,6 +1,6 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import type { MotionComposition } from "@openreel/core";
-import type { Project } from "@openreel/core/types/project";
+import type { MotionComposition } from "@openfield/core";
+import type { Project } from "@openfield/core/types/project";
 
 const { exportMock } = vi.hoisted(() => ({
   exportMock: vi.fn(),

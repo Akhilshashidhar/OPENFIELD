@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 import type { ReactNode } from "react";
-import { ToolcraftSwitchControl, ToolcraftText } from "@openreel/ui";
+import { ToolcraftSwitchControl, ToolcraftText } from "@openfield/ui";
 import {
   AlignCenter,
   AlignHorizontalDistributeCenter,
@@ -169,7 +169,7 @@ import {
   type MotionTextAnimatorEasing,
   type MotionTextShaderRef,
   type BlendMode,
-} from "@openreel/core";
+} from "@openfield/core";
 import { useProjectStore } from "../../stores/project-store";
 import { useMotionStore } from "../stores/motion-store";
 import {

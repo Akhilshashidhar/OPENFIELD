@@ -13,7 +13,7 @@ import type {
   MulticamManifestConstraints,
   MulticamVadTrack,
   MulticamCalibrationRange,
-} from "@openreel/core";
+} from "@openfield/core";
 
 export interface MulticamSyncAnalysis {
   results: Map<string, SyncResult>;

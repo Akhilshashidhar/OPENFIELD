@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 import { useState } from "react";
-import { ToolcraftButton as Button } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
 import { ChevronRight, Loader2, Check, X, Ban, Wrench } from "@/icons/lucide-compat";
 import type { ToolCallView } from "../../../stores/chat-store";
 

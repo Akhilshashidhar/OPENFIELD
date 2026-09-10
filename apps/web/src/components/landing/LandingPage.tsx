@@ -8,6 +8,7 @@ import {
   Scissors,
   FolderOpen,
   Clapperboard,
+  Github,
 } from "@/icons/lucide-compat";
 import { OpenFieldLogo } from "../brand/OpenFieldLogo";
 import { useRouter } from "../../hooks/use-router";
@@ -18,6 +19,8 @@ import { useAuthStore } from "../../stores/auth-store";
  * Monochrome brand: near-black on a warm off-white, serif "Openfield"
  * wordmark, black buttons, hand-drawn annotations, and a 3-step section.
  */
+
+const GITHUB_URL = "https://github.com/Akhilshashidhar/OPENFIELD";
 
 const INK = "#14201a"; // near-black brand ink
 const PAPER = "#f8f6f1"; // warm off-white background
@@ -50,12 +53,13 @@ export const LandingPage: React.FC = () => {
             Product
           </a>
           <a
-            href="https://github.com"
+            href={GITHUB_URL}
             target="_blank"
             rel="noreferrer"
-            className="text-[14px] font-medium hover:opacity-70"
+            className="inline-flex items-center gap-1.5 text-[14px] font-medium hover:opacity-70"
             style={{ color: MUTED }}
           >
+            <Github size={16} aria-hidden />
             GitHub
           </a>
         </nav>

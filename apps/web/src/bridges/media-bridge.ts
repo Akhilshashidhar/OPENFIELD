@@ -3,12 +3,12 @@ import {
   initializeMediaImportService,
   WaveformGenerator,
   getWaveformGenerator,
-} from "@openreel/core";
+} from "@openfield/core";
 import type {
   ProcessedMedia,
   WaveformData,
   MediaTrackInfo,
-} from "@openreel/core";
+} from "@openfield/core";
 import { useProjectStore } from "../stores/project-store";
 
 /**

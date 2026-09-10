@@ -2,9 +2,9 @@ import {
   TransitionEngine,
   createTransitionEngine,
   type TransitionValidationResult,
-} from "@openreel/core";
-import type { Transition, Clip, Track, TransitionEdge } from "@openreel/core";
-import type { TransitionType, TransitionParams } from "@openreel/core";
+} from "@openfield/core";
+import type { Transition, Clip, Track, TransitionEdge } from "@openfield/core";
+import type { TransitionType, TransitionParams } from "@openfield/core";
 
 /**
  * Result of a transition operation

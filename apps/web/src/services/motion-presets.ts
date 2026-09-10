@@ -55,7 +55,7 @@ export interface AppliedMotionPreset {
   type: "in" | "out" | "emphasis";
 }
 
-const DB_NAME = "openreel-motion-presets";
+const DB_NAME = "openfield-motion-presets";
 const DB_VERSION = 1;
 const STORE_NAME = "userPresets";
 

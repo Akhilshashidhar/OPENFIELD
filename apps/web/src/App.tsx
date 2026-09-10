@@ -16,8 +16,8 @@ import { useRouter } from "./hooks/use-router";
 import { useProjectRecovery } from "./hooks/useProjectRecovery";
 import { trackEvent } from "./hooks/useAnalytics";
 import { useKieAIPoller } from "./hooks/useKieAIPoller";
-import { SOCIAL_MEDIA_PRESETS, type SocialMediaCategory } from "@openreel/core";
-import { ToolcraftText as Text } from "@openreel/ui";
+import { SOCIAL_MEDIA_PRESETS, type SocialMediaCategory } from "@openfield/core";
+import { ToolcraftText as Text } from "@openfield/ui";
 
 const EditorInterface = lazy(() =>
   import("./components/editor/EditorInterface").then((m) => ({

@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
-import { ToolcraftIconButton as IconButton } from "@openreel/ui";
+import { ToolcraftIconButton as IconButton } from "@openfield/ui";
 import { Boxes, AlertTriangle, CheckCircle2, Info, X } from "@/icons/lucide-compat";
-import type { MotionComposition } from "@openreel/core/motion/types";
+import type { MotionComposition } from "@openfield/core/motion/types";
 import { useProjectStore } from "../../../stores/project-store";
 import {
   reviewCreationState,

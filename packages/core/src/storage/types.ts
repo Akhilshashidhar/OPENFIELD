@@ -2,7 +2,7 @@ import type { Project, MediaMetadata } from "../types";
 
 export const DB_VERSION = 3;
 
-export const DB_NAME = "openreel-db";
+export const DB_NAME = "openfield-db";
 
 export const STORES = {
   PROJECTS: "projects",

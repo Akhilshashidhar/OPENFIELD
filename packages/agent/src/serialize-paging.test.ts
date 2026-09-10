@@ -1,6 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { listClips } from "./serialize";
-import type { Project } from "@openreel/core/types/project";
+import type { Project } from "@openfield/core/types/project";
 
 function projectWithClips(n: number): Project {
   const clips = Array.from({ length: n }, (_, i) => ({

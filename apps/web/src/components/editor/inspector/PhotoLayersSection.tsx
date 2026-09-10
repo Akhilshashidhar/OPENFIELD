@@ -11,13 +11,13 @@ import {
   GripVertical,
   ChevronDown,
 } from "@/icons/lucide-compat";
-import type { PhotoBlendMode, PhotoLayer } from "@openreel/core";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftCard as Card } from "@openreel/ui";
-import { ToolcraftClickableCard as ClickableCard } from "@openreel/ui";
-import { ToolcraftIconButton as IconButton } from "@openreel/ui";
-import { ToolcraftPopover as Popover } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
+import type { PhotoBlendMode, PhotoLayer } from "@openfield/core";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftCard as Card } from "@openfield/ui";
+import { ToolcraftClickableCard as ClickableCard } from "@openfield/ui";
+import { ToolcraftIconButton as IconButton } from "@openfield/ui";
+import { ToolcraftPopover as Popover } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import { PropertySlider } from "./shell/PropertySlider";
 
 const BLEND_MODES: { value: PhotoBlendMode; label: string }[] = [

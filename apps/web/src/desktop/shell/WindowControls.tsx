@@ -1,6 +1,6 @@
 import type { JSX } from "react";
 import type React from "react";
-import { ToolcraftIconButton as IconButton } from "@openreel/ui";
+import { ToolcraftIconButton as IconButton } from "@openfield/ui";
 import { Icon } from "@/icons/Icon";
 
 export function WindowControls({ platform }: { platform: string }): JSX.Element | null {

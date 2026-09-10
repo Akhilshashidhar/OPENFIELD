@@ -18,7 +18,7 @@ const h = vi.hoisted(() => ({
   setDesktopPage: vi.fn(),
 }));
 
-vi.mock("@openreel/agent", () => ({
+vi.mock("@openfield/agent", () => ({
   executeTool: h.executeTool,
   getTool: h.getTool,
   isDestructive: h.isDestructive,

@@ -1,5 +1,5 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
-import type { MediaItem } from "@openreel/core";
+import type { MediaItem } from "@openfield/core";
 import {
   createMissingMediaItem,
   generateThumbnailFromBlob,

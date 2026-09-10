@@ -1,4 +1,4 @@
-import { getAudioEngine } from "@openreel/core";
+import { getAudioEngine } from "@openfield/core";
 import { useProjectStore } from "../stores/project-store";
 
 export interface SilenceSettings {

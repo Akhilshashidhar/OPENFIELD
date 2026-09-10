@@ -1,5 +1,5 @@
 import * as React from "react";
-import { Tabs, TabsList, TabsTrigger } from "@openreel/ui";
+import { Tabs, TabsList, TabsTrigger } from "@openfield/ui";
 import type { InspectorTabDef, InspectorTabId } from "../clip-tabs.config";
 
 export interface InspectorTabsProps {

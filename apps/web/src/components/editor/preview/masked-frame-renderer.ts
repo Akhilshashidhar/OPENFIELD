@@ -1,4 +1,4 @@
-import type { Mask, MaskEngine } from "@openreel/core";
+import type { Mask, MaskEngine } from "@openfield/core";
 import { drawFrameWithTransform } from "./canvas-renderers";
 import type { ClipTransform } from "./types";
 

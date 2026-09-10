@@ -17,8 +17,8 @@ import {
 import {
   SOCIAL_MEDIA_CATEGORY_INFO,
   type SocialMediaCategory,
-} from "@openreel/core";
-import { ToolcraftButton as Button } from "@openreel/ui";
+} from "@openfield/core";
+import { ToolcraftButton as Button } from "@openfield/ui";
 
 interface CategoryTabsProps {
   selectedCategory: SocialMediaCategory | "all";

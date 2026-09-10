@@ -4,8 +4,8 @@ import { HeadlessHost } from "./headless-host";
 import { executeTool, isDestructive } from "./executor";
 import { makeEmptyProject, makeProjectWithClip } from "./test-fixtures";
 import type { EditorStateView, ClipView } from "./serialize";
-import { getMotionLayerPropertyValueAtTime } from "@openreel/core/motion/motion-keyframes";
-import type { MotionLayer } from "@openreel/core/motion/types";
+import { getMotionLayerPropertyValueAtTime } from "@openfield/core/motion/motion-keyframes";
+import type { MotionLayer } from "@openfield/core/motion/types";
 
 function decodePngDataUri(dataUri: string): { width: number; height: number; rgba: Uint8Array } {
   const encoded = dataUri.replace(/^data:image\/png;base64,/, "");

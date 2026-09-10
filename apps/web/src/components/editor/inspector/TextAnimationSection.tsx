@@ -1,7 +1,7 @@
 import React, { useCallback } from "react";
-import { ToolcraftCard as Card } from "@openreel/ui";
-import { ToolcraftSelectControl as Selector } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
+import { ToolcraftCard as Card } from "@openfield/ui";
+import { ToolcraftSelectControl as Selector } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import { Type, Clock, Play } from "@/icons/lucide-compat";
 import { PropertySlider } from "./shell/PropertySlider";
 import { useProjectStore } from "../../../stores/project-store";
@@ -9,7 +9,7 @@ import {
   TEXT_ANIMATION_PRESETS,
   type TextAnimationPreset,
   type TextAnimationParams,
-} from "@openreel/core";
+} from "@openfield/core";
 
 interface PresetInfo {
   value: TextAnimationPreset;

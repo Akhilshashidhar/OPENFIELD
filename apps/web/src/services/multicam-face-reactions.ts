@@ -2,8 +2,8 @@ import type {
   MulticamFaceSignal,
   MulticamManifest,
   MulticamReactionCue,
-} from "@openreel/core";
-import { detectMulticamReactionCues } from "@openreel/core";
+} from "@openfield/core";
+import { detectMulticamReactionCues } from "@openfield/core";
 import type { ResolvedMulticamSource } from "../components/editor/inspector/multicam-workflow";
 
 const FACE_MODEL =

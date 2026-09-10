@@ -1,7 +1,7 @@
 import React, { useRef, useState, useEffect, useCallback } from "react";
-import { ToolcraftContextMenu as ContextMenu } from "@openreel/ui";
+import { ToolcraftContextMenu as ContextMenu } from "@openfield/ui";
 import { Shapes, FileCode, Smile } from "@/icons/lucide-compat";
-import type { ShapeClip, SVGClip, StickerClip, Track } from "@openreel/core";
+import type { ShapeClip, SVGClip, StickerClip, Track } from "@openfield/core";
 import { useGraphicsClipContextMenuItems } from "./GraphicsClipContextMenu";
 import { calculateSnap } from "./utils";
 import { useProjectStore } from "../../../stores/project-store";

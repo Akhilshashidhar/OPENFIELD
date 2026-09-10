@@ -1,5 +1,5 @@
 import { v4 as uuidv4 } from "uuid";
-import { resolveTimelinePlacement } from "@openreel/core";
+import { resolveTimelinePlacement } from "@openfield/core";
 import { useProjectStore } from "../project-store";
 
 /**

@@ -17,7 +17,7 @@ export const loadAudioBuffer = async (
   const audioTrackIndex = options.audioTrackIndex ?? 0;
 
   try {
-    const { extractAudioWav } = await import("@openreel/core/media");
+    const { extractAudioWav } = await import("@openfield/core/media");
     options.onProgress?.({
       stage: "extracting",
       progress: 0.08,

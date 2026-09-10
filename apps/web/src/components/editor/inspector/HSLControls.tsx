@@ -1,10 +1,10 @@
 import React, { useCallback, useState, useMemo } from "react";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftClickableCard as ClickableCard } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftClickableCard as ClickableCard } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import { PropertySlider } from "./shell/PropertySlider";
 import { RotateCcw } from "@/icons/lucide-compat";
-import type { HSLValues } from "@openreel/core";
+import type { HSLValues } from "@openfield/core";
 
 export const DEFAULT_HSL_VALUES: HSLValues = {
   hue: [0, 0, 0, 0, 0, 0, 0, 0],

@@ -3,9 +3,9 @@ import {
   deserializeOrma,
   serializeOrma,
   type OrmaArtifact,
-} from "@openreel/core";
+} from "@openfield/core";
 
-const store = createStore("openreel-multicam-analysis", "orma-artifacts");
+const store = createStore("openfield-multicam-analysis", "orma-artifacts");
 
 export const multicamArtifactId = (projectId: string, groupId: string): string =>
   `${projectId}/${groupId}.orma`;

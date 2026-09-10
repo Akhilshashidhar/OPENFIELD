@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import type { Action } from "@openreel/core/types/actions";
+import type { Action } from "@openfield/core/types/actions";
 import { HeadlessHost } from "./headless-host";
 import { makeEmptyProject, makeProjectWithClip } from "./test-fixtures";
 

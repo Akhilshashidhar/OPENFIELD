@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest";
-import type { Clip, Track, Transition } from "@openreel/core";
+import type { Clip, Track, Transition } from "@openfield/core";
 import {
   resolveTransitionHandles,
   TRANSITION_ADJACENCY_TOLERANCE,

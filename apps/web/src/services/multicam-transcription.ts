@@ -1,4 +1,4 @@
-import type { MulticamTranscriptSegment } from "@openreel/core";
+import type { MulticamTranscriptSegment } from "@openfield/core";
 import { audioBufferToWhisperSamples } from "../utils/whisper-audio";
 import type { WhisperModelKey } from "../workers/whisper-models";
 

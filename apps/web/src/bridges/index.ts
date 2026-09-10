@@ -2,7 +2,7 @@
  * Bridge modules for connecting UI stores to core engines
  *
  * Bridges provide the integration layer between React/Zustand UI state
- * and the @openreel/core engine implementations.
+ * and the @openfield/core engine implementations.
  */
 
 export {

@@ -3,18 +3,18 @@ import { HeadlessHost } from "./headless-host";
 import { executeTool } from "./executor";
 import { getTool } from "./registry";
 import { makeEmptyProject } from "./test-fixtures";
-import { DEFAULT_MOTION_TRANSFORM } from "@openreel/core/motion/types";
+import { DEFAULT_MOTION_TRANSFORM } from "@openfield/core/motion/types";
 import type {
   MotionComposition,
   MotionLayer,
   MotionShapeLayer,
-} from "@openreel/core/motion/types";
+} from "@openfield/core/motion/types";
 import type {
   EditingHost,
   ExportMotionSceneOptions,
   ExportMotionSceneResult,
 } from "./host";
-import type { Project } from "@openreel/core/types/project";
+import type { Project } from "@openfield/core/types/project";
 
 const COMP_ID = "comp-export";
 const SHAPE_ID = "layer-shape";

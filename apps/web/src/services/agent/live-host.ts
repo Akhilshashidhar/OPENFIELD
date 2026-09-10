@@ -30,14 +30,14 @@ import type {
   MotionRenderQueueAddError,
   MotionRenderQueueRunResult,
   MulticamHostBridge,
-} from "@openreel/agent";
-import type { TextStyle, TextAnimationPreset } from "@openreel/core/text/types";
-import type { ShapeStyle, ShapeType } from "@openreel/core/graphics/types";
-import type { Transform } from "@openreel/core/types/timeline";
-import { CAPABILITY_MANIFEST } from "@openreel/core/capabilities/manifest";
-import type { Action } from "@openreel/core/types/actions";
-import type { Project } from "@openreel/core/types/project";
-import type { CapabilityManifest } from "@openreel/core/capabilities/manifest";
+} from "@openfield/agent";
+import type { TextStyle, TextAnimationPreset } from "@openfield/core/text/types";
+import type { ShapeStyle, ShapeType } from "@openfield/core/graphics/types";
+import type { Transform } from "@openfield/core/types/timeline";
+import { CAPABILITY_MANIFEST } from "@openfield/core/capabilities/manifest";
+import type { Action } from "@openfield/core/types/actions";
+import type { Project } from "@openfield/core/types/project";
+import type { CapabilityManifest } from "@openfield/core/capabilities/manifest";
 import { useProjectStore } from "../../stores/project-store";
 import { insertTimelineOverlay } from "../../stores/project/insert-timeline-overlay";
 import { checkForRecovery } from "../auto-save";
@@ -647,7 +647,7 @@ export class LiveEditorHost implements EditingHost {
     options: StickerOverlayOptions,
   ): Promise<OverlayRef> {
     this.requireOpenProject();
-    const { stickerLibrary } = await import("@openreel/core");
+    const { stickerLibrary } = await import("@openfield/core");
     const created = await insertTimelineOverlay(
       options.startSec,
       options.durationSec,

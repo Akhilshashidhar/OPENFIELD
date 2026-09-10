@@ -4,11 +4,11 @@ import {
   type MotionComposition,
   type MotionLayer,
   type Project,
-} from "@openreel/core";
+} from "@openfield/core";
 import {
   createCreationScene,
   createEmptyCreationState,
-} from "@openreel/core/creation/index";
+} from "@openfield/core/creation/index";
 import {
   resolveMotionCreatorCompositionId,
   resolveMotionCreatorPreviewTime,

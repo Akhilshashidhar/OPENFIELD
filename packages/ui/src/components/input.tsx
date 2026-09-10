@@ -1,6 +1,6 @@
 import * as React from "react"
 
-import { cn } from "@openreel/ui/lib/utils"
+import { cn } from "@openfield/ui/lib/utils"
 
 const Input = React.forwardRef<HTMLInputElement, React.ComponentProps<"input">>(
   ({ className, type, ...props }, ref) => {

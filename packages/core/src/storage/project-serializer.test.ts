@@ -301,7 +301,7 @@ describe("ProjectSerializer round-trip", () => {
     });
 
     expect(() => serializer.importFromJson(json)).toThrow(
-      /requires OpenReel project reader 9\.0\.0 or newer/,
+      /requires OpenField project reader 9\.0\.0 or newer/,
     );
     expect(serializer.validateProjectJson(json)).toMatchObject({
       valid: false,

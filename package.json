@@ -40,12 +40,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/openfield/openfield.git"
+    "url": "https://github.com/Akhilshashidhar/OPENFIELD.git"
   },
   "bugs": {
-    "url": "https://github.com/openfield/openfield/issues"
+    "url": "https://github.com/Akhilshashidhar/OPENFIELD/issues"
   },
-  "homepage": "https://openfield.video",
+  "homepage": "https://github.com/Akhilshashidhar/OPENFIELD",
   "engines": {
     "node": ">=18.0.0",
     "pnpm": ">=8.0.0"

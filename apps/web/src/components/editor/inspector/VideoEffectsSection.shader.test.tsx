@@ -1,7 +1,7 @@
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
 import { cleanup, fireEvent, render, screen, waitFor } from "@testing-library/react";
-import type { Project } from "@openreel/core";
-import { getMotionShaderDef, getMotionShaderEffectDefs } from "@openreel/core";
+import type { Project } from "@openfield/core";
+import { getMotionShaderDef, getMotionShaderEffectDefs } from "@openfield/core";
 import { createEmptyProject } from "../../../stores/project/project-helpers";
 import { useProjectStore } from "../../../stores/project-store";
 import { VideoEffectsSection } from "./VideoEffectsSection";

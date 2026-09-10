@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import type { StoreApi } from "zustand";
-import type { Action, Project } from "@openreel/core";
-import { withUniversalTracksCapability } from "@openreel/core";
+import type { Action, Project } from "@openfield/core";
+import { withUniversalTracksCapability } from "@openfield/core";
 import type { ProjectState } from "../project-store";
 
 type Get = StoreApi<ProjectState>["getState"];

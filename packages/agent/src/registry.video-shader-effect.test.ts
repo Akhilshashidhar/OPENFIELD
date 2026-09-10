@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import { HeadlessHost } from "./headless-host";
 import { executeTool } from "./executor";
 import { makeProjectWithClip } from "./test-fixtures";
-import type { Project } from "@openreel/core/types/project";
+import type { Project } from "@openfield/core/types/project";
 
 function clipEffects(project: Project): ReadonlyArray<{
   readonly id: string;

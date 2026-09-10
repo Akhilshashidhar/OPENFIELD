@@ -230,7 +230,7 @@ export const useSettingsStore = create<SettingsState>()(
         closeSettings: () => set({ settingsOpen: false }),
       }),
       {
-        name: "openreel-settings",
+        name: "openfield-settings",
         version: 7,
         migrate: (persisted, version) => {
           const next = (persisted ?? {}) as Record<string, unknown>;

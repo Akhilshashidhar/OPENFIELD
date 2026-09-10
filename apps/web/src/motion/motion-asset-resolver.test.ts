@@ -5,8 +5,8 @@ import type {
   MotionComposition,
   MotionRenderQuality,
   MotionScene3DLayer,
-} from "@openreel/core";
-import type { CreationProjectState } from "@openreel/core/creation/index";
+} from "@openfield/core";
+import type { CreationProjectState } from "@openfield/core/creation/index";
 import {
   clearWebMotionAssetBitmapCache,
   createWebMotionAssetResolver,

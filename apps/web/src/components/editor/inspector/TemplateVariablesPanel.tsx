@@ -10,19 +10,19 @@ import {
   Upload,
   Check,
 } from "@/icons/lucide-compat";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftIconButton as IconButton } from "@openreel/ui";
-import { ToolcraftSelectableCard as SelectableCard } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
-import { ToolcraftTextAreaControl } from "@openreel/ui";
-import { ToolcraftTextInputControl } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftIconButton as IconButton } from "@openfield/ui";
+import { ToolcraftSelectableCard as SelectableCard } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
+import { ToolcraftTextAreaControl } from "@openfield/ui";
+import { ToolcraftTextInputControl } from "@openfield/ui";
 import { useProjectStore } from "../../../stores/project-store";
 import type {
   Template,
   TemplatePlaceholder,
   TemplateReplacements,
   PlaceholderReplacement,
-} from "@openreel/core";
+} from "@openfield/core";
 
 interface PlaceholderInputProps {
   placeholder: TemplatePlaceholder;

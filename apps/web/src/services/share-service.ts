@@ -1,4 +1,4 @@
-import { OPENREEL_CLOUD_URL } from "../config/api-endpoints";
+import { OPENFIELD_CLOUD_URL } from "../config/api-endpoints";
 import { shareBaseOrigin } from "./share-origin";
 
 export interface ShareResult {
@@ -69,14 +69,14 @@ export async function uploadForSharing(
       reject(new Error("Upload was cancelled"));
     });
 
-    xhr.open("POST", `${OPENREEL_CLOUD_URL}/shares`);
+    xhr.open("POST", `${OPENFIELD_CLOUD_URL}/shares`);
     xhr.send(formData);
   });
 }
 
 export async function getShareInfo(shareId: string): Promise<ShareInfo | null> {
   try {
-    const response = await fetch(`${OPENREEL_CLOUD_URL}/shares/${shareId}`);
+    const response = await fetch(`${OPENFIELD_CLOUD_URL}/shares/${shareId}`);
 
     if (response.status === 404) {
       return null;
@@ -100,7 +100,7 @@ export async function getShareInfo(shareId: string): Promise<ShareInfo | null> {
 }
 
 export function getShareDownloadUrl(shareId: string): string {
-  return `${OPENREEL_CLOUD_URL}/shares/${shareId}/download`;
+  return `${OPENFIELD_CLOUD_URL}/shares/${shareId}/download`;
 }
 
 export function getSharePageUrl(shareId: string): string {
@@ -131,7 +131,7 @@ export function isShareExpired(expiresAt: number): boolean {
 
 export async function checkShareHealth(): Promise<boolean> {
   try {
-    const response = await fetch(`${OPENREEL_CLOUD_URL}/health`);
+    const response = await fetch(`${OPENFIELD_CLOUD_URL}/health`);
     return response.ok;
   } catch {
     return false;

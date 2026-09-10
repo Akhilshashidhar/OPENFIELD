@@ -4,7 +4,7 @@
  *
  * OpenField is built on the open-source OpenReel Video editor (MIT License,
  * © 2024-2026 Augustus Otu and Contributors). Internal package names
- * (@openreel/*) are intentionally left unchanged — they are implementation
+ * (@openfield/*) are intentionally left unchanged — they are implementation
  * details and renaming them provides no user value while risking regressions.
  */
 export const BRAND = {

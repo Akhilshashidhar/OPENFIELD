@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 /* ============================================================
-   OpenReel Editor — v2 design tokens (cinematic dark, emerald)
+   OpenField Editor — v2 design tokens (monochrome black/white brand)
    All values are CSS variables. Components use Tailwind utilities
    that map to these via tailwind.config.js.
    ============================================================ */
@@ -33,7 +33,7 @@
     color-scheme: dark;
   }
 
-  /* light theme — Claude Design "Editor" mock (emerald brand accent, Inter) */
+  /* light theme — white surfaces, near-black (#14201a) brand accent, Inter */
   :root,
   [data-theme="light"] {
     --bg: #f4f4f6;            /* window / app background */
@@ -128,7 +128,8 @@
     --card-foreground: 240 10% 4%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 4%;
-    --primary: 160 84% 39%;
+    /* brand: near-black (#14201a) primary in light theme */
+    --primary: 154 23% 10%;
     --primary-foreground: 0 0% 100%;
     --secondary: 240 5% 96%;
     --secondary-foreground: 240 6% 10%;
@@ -139,7 +140,7 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 98%;
     --input: 240 6% 90%;
-    --ring: 160 84% 39%;
+    --ring: 154 23% 10%;
     --radius: 0.625rem;
   }
 
@@ -151,8 +152,9 @@
     --card-foreground: 0 0% 95%;
     --popover: 220 10% 13%;
     --popover-foreground: 0 0% 95%;
-    --primary: 158 64% 52%;
-    --primary-foreground: 0 0% 100%;
+    /* brand: near-white primary in dark theme */
+    --primary: 0 0% 97%;
+    --primary-foreground: 220 12% 9%;
     --secondary: 220 8% 18%;
     --secondary-foreground: 0 0% 95%;
     --muted: 220 8% 18%;
@@ -162,7 +164,7 @@
     --destructive: 0 62% 50%;
     --destructive-foreground: 0 0% 95%;
     --input: 220 8% 24%;
-    --ring: 158 64% 52%;
+    --ring: 0 0% 97%;
   }
 
   html,

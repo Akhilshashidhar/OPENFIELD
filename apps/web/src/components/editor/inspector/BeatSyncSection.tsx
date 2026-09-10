@@ -1,9 +1,9 @@
 import React, { useCallback, useState, useEffect } from "react";
 import { Music, Zap, Play, Loader2, RefreshCw, Scissors } from "@/icons/lucide-compat";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftNumberInputControl } from "@openreel/ui";
-import { ToolcraftSelectableCard as SelectableCard } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftNumberInputControl } from "@openfield/ui";
+import { ToolcraftSelectableCard as SelectableCard } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import { useProjectStore } from "../../../stores/project-store";
 import {
   getBeatSyncBridge,

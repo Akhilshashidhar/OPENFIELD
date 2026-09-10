@@ -1,6 +1,6 @@
 import type { JSX, MouseEvent } from "react";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftIconButton as IconButton } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftIconButton as IconButton } from "@openfield/ui";
 import { MessageSquareText, Plus, Trash2 } from "@/icons/lucide-compat";
 import { useChatHistoryStore } from "../../../stores/chat-history-store";
 import { useChatStore } from "../../../stores/chat-store";

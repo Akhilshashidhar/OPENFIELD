@@ -6,7 +6,7 @@ import {
   isMotionPixelEffect,
   type MotionEffect,
   type MotionShapeLayer,
-} from "@openreel/core";
+} from "@openfield/core";
 
 interface MotionEffectPreviewProps {
   effect: MotionEffect;

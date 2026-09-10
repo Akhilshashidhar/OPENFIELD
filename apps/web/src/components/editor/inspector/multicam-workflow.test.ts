@@ -5,7 +5,7 @@ import {
   type MediaItem,
   type MultiCamGroup,
   type Project,
-} from "@openreel/core";
+} from "@openfield/core";
 import {
   createMulticamApplyEditAction,
   buildMulticamManifest,

@@ -2,18 +2,18 @@ import { describe, it, expect } from "vitest";
 import { HeadlessHost } from "./headless-host";
 import { executeTool } from "./executor";
 import { makeEmptyProject } from "./test-fixtures";
-import { DEFAULT_MOTION_TRANSFORM } from "@openreel/core/motion/types";
+import { DEFAULT_MOTION_TRANSFORM } from "@openfield/core/motion/types";
 import {
   createMotionExpression,
   evaluateMotionPropertyValueAtTime,
-} from "@openreel/core/motion/motion-expressions";
+} from "@openfield/core/motion/motion-expressions";
 import type {
   MotionComposition,
   MotionLayer,
   MotionShapeLayer,
   MotionExpression,
-} from "@openreel/core/motion/types";
-import type { Project } from "@openreel/core/types/project";
+} from "@openfield/core/motion/types";
+import type { Project } from "@openfield/core/types/project";
 
 interface AddControlData {
   readonly effectId?: string;

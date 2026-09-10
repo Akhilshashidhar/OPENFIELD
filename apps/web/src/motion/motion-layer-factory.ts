@@ -8,7 +8,7 @@ import {
   type MotionComposition,
   type MotionLayer,
   type MotionObject3D,
-} from "@openreel/core";
+} from "@openfield/core";
 
 export type CreatableMotionLayerType =
   | "text"

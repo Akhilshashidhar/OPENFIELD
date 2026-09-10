@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useRef, useCallback } from "react";
-import { ToolcraftText as Text } from "@openreel/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import { PanelLeftClose, PanelRightClose, PanelLeftOpen, PanelRightOpen } from "@/icons/lucide-compat";
 
 import { Toolbar } from "./Toolbar";
@@ -285,7 +285,7 @@ export const EditorInterface: React.FC = () => {
 
   const [selectedKeyframeIds, setSelectedKeyframeIds] = React.useState<string[]>([]);
   const [copiedKeyframes, setCopiedKeyframes] = React.useState<
-    import("@openreel/core").Keyframe[]
+    import("@openfield/core").Keyframe[]
   >([]);
 
   const selectedClip = React.useMemo(() => {
@@ -302,7 +302,7 @@ export const EditorInterface: React.FC = () => {
   const handleUpdateKeyframe = React.useCallback(
     (
       keyframeId: string,
-      updates: Partial<import("@openreel/core").Keyframe>,
+      updates: Partial<import("@openfield/core").Keyframe>,
     ) => {
       if (!selectedClip?.keyframes) return;
       const keyframes = selectedClip.keyframes.map((kf) =>

@@ -5,7 +5,7 @@ const { mockImportMedia } = vi.hoisted(() => ({
   mockImportMedia: vi.fn(),
 }));
 
-vi.mock("@openreel/core", () => ({
+vi.mock("@openfield/core", () => ({
   initializeMediaImportService: vi.fn().mockResolvedValue({
     importMedia: mockImportMedia,
     getSupportedFormats: vi

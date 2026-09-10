@@ -3,8 +3,8 @@ import {
   makeClientFromSend,
   llmHttpError,
   parseRetryAfterMs,
-} from "@openreel/agent";
-import type { LLMClient } from "@openreel/agent";
+} from "@openfield/agent";
+import type { LLMClient } from "@openfield/agent";
 import { apiFetch } from "../api-proxy";
 import type { LlmProvider } from "../../stores/settings-store";
 
@@ -63,7 +63,7 @@ export interface BYOKClientOptions {
 }
 
 /**
- * Builds an @openreel/agent LLMClient whose transport routes through the
+ * Builds an @openfield/agent LLMClient whose transport routes through the
  * existing BYOK apiFetch (same-origin Pages proxy for built-ins, direct browser
  * requests for custom endpoints, and keychain-backed native requests on desktop).
  */

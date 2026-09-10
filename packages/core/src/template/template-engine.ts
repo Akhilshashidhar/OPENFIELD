@@ -21,7 +21,7 @@ import type {
   ExtendedPlaceholderConstraints,
 } from "../types/scriptable-template";
 
-const TEMPLATE_DB_NAME = "openreel-templates";
+const TEMPLATE_DB_NAME = "openfield-templates";
 const TEMPLATE_STORE_NAME = "templates";
 const TEMPLATE_DB_VERSION = 1;
 

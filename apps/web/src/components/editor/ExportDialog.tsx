@@ -23,22 +23,22 @@ import {
 import {
   ToolcraftSegmentedControl,
   ToolcraftSwitchControl,
-} from "@openreel/ui";
-import { ToolcraftButton as Button } from "@openreel/ui";
+} from "@openfield/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
 import {
   ToolcraftDialog as Dialog,
   ToolcraftDialogHeader as DialogHeader,
-} from "@openreel/ui";
+} from "@openfield/ui";
 import {
   ToolcraftLayout as Layout,
   ToolcraftLayoutContent as LayoutContent,
   ToolcraftLayoutFooter as LayoutFooter,
-} from "@openreel/ui";
-import { ToolcraftNumberInputControl } from "@openreel/ui";
-import { ToolcraftSelectableCard as SelectableCard } from "@openreel/ui";
-import { ToolcraftSelectControl as Selector } from "@openreel/ui";
-import { ToolcraftSliderControl } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
+} from "@openfield/ui";
+import { ToolcraftNumberInputControl } from "@openfield/ui";
+import { ToolcraftSelectableCard as SelectableCard } from "@openfield/ui";
+import { ToolcraftSelectControl as Selector } from "@openfield/ui";
+import { ToolcraftSliderControl } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import {
   exportPresetsManager,
   type PlatformExportPreset,
@@ -50,7 +50,7 @@ import type {
   CompressionSource,
   CompressionTarget,
   CompressionPlan,
-} from "@openreel/core";
+} from "@openfield/core";
 import type { SourceExportMatch } from "../../services/export-source-match";
 import {
   getDeviceProfile,
@@ -69,7 +69,7 @@ import {
   type BenchmarkProgress,
   type TimeEstimate,
   type CodecRecommendation,
-} from "@openreel/core";
+} from "@openfield/core";
 import { EDITING_FRAME_RATE_OPTIONS } from "./editing-frame-rate";
 
 const WEB_EXPORT_GUARDRAIL_MESSAGE =

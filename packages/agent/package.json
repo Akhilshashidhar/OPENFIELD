@@ -1,5 +1,5 @@
 {
-  "name": "@openreel/agent",
+  "name": "@openfield/agent",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -25,7 +25,7 @@
     "vitest": "^1.6.0"
   },
   "dependencies": {
-    "@openreel/core": "workspace:*",
-    "@openreel/creation-schema": "workspace:*"
+    "@openfield/core": "workspace:*",
+    "@openfield/creation-schema": "workspace:*"
   }
 }

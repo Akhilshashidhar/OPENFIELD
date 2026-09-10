@@ -1,4 +1,4 @@
-import type { MotionShaderCategory } from "@openreel/core";
+import type { MotionShaderCategory } from "@openfield/core";
 
 const COMMON_CONTRACT = [
   "You author a single GLSL fragment shader for a WebGL2 motion graphics engine.",

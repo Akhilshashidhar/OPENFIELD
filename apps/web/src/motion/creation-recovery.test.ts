@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import type { MotionComposition, Project } from "@openreel/core";
-import type { CreationProjectState, CreationScene } from "@openreel/core/creation/index";
+import type { MotionComposition, Project } from "@openfield/core";
+import type { CreationProjectState, CreationScene } from "@openfield/core/creation/index";
 import {
   findRecoverableScene3DLayers,
   planRecoverMotionScene3DLayer,

@@ -1,12 +1,12 @@
 import React, { useCallback, useMemo } from "react";
-import { ToolcraftText as Text } from "@openreel/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import { MockSlider } from "./shell/InspectorControls";
 import { useProjectStore } from "../../../stores/project-store";
 import {
   getAvailableBlendModes,
   getBlendModeName,
   type BlendMode,
-} from "@openreel/core";
+} from "@openfield/core";
 
 interface BlendingSectionProps {
   clipId: string;

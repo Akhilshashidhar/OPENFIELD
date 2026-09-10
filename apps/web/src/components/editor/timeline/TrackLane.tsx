@@ -5,11 +5,11 @@ import type {
   ShapeClip,
   SVGClip,
   StickerClip,
-} from "@openreel/core";
+} from "@openfield/core";
 import {
   getMediaItemCapabilities,
   resolveTimelinePlacement,
-} from "@openreel/core";
+} from "@openfield/core";
 import { ClipComponent } from "./ClipComponent";
 import { TextClipComponent } from "./TextClipComponent";
 import { ShapeClipComponent } from "./ShapeClipComponent";

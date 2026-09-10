@@ -3,8 +3,8 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import type { SourceExportMatch } from "../../services/export-source-match";
 import { ExportDialog } from "./ExportDialog";
 
-vi.mock("@openreel/core", async (importOriginal) => {
-  const actual = await importOriginal<typeof import("@openreel/core")>();
+vi.mock("@openfield/core", async (importOriginal) => {
+  const actual = await importOriginal<typeof import("@openfield/core")>();
   return {
     ...actual,
     estimateExportTime: vi.fn(() => null),

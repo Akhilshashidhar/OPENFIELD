@@ -1,5 +1,5 @@
 import React from "react";
-import { ToolcraftSliderControl } from "@openreel/ui";
+import { ToolcraftSliderControl } from "@openfield/ui";
 
 export interface PropertySliderProps {
   label: string;

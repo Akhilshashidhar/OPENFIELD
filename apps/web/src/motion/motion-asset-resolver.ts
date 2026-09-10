@@ -1,12 +1,12 @@
-import { resolveCreationMotionSceneBinding } from "@openreel/core/creation/index";
-import { renderAuroraPreviewToImageBitmap } from "@openreel/core/motion/native-aurora-bridge";
+import { resolveCreationMotionSceneBinding } from "@openfield/core/creation/index";
+import { renderAuroraPreviewToImageBitmap } from "@openfield/core/motion/native-aurora-bridge";
 import type {
   MediaItem,
   MotionAsset,
   MotionRendererAssetResolver,
   MotionScene3DRenderResult,
-} from "@openreel/core";
-import type { CreationProjectState } from "@openreel/core/creation/index";
+} from "@openfield/core";
+import type { CreationProjectState } from "@openfield/core/creation/index";
 
 const imageBitmapCache = new Map<string, Promise<ImageBitmap | null>>();
 const videoElementCache = new Map<string, Promise<HTMLVideoElement | null>>();

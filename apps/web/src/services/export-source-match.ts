@@ -1,4 +1,4 @@
-import type { MediaItem, Project } from "@openreel/core";
+import type { MediaItem, Project } from "@openfield/core";
 
 export interface SourceExportMatch {
   width: number;

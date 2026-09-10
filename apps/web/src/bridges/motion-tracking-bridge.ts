@@ -6,7 +6,7 @@ import {
   type TrackingData,
   type TrackingKeyframe,
   type Point,
-} from "@openreel/core";
+} from "@openfield/core";
 
 export interface MotionTrackingState {
   isTracking: boolean;

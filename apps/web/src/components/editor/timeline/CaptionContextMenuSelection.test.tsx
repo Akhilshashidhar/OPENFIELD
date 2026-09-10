@@ -1,6 +1,6 @@
 import { cleanup, fireEvent, render, screen } from "@testing-library/react";
 import { afterEach, describe, expect, it } from "vitest";
-import { ToolcraftContextMenu as ContextMenu } from "@openreel/ui";
+import { ToolcraftContextMenu as ContextMenu } from "@openfield/ui";
 import { useUIStore } from "../../../stores/ui-store";
 
 describe("caption context-menu selection", () => {

@@ -12,15 +12,15 @@ import {
   Hash,
   Music,
 } from "@/icons/lucide-compat";
-import { ToolcraftSwitchControl } from "@openreel/ui";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftDialog as Dialog, ToolcraftDialogHeader as DialogHeader } from "@openreel/ui";
-import { ToolcraftLayout as Layout, ToolcraftLayoutContent as LayoutContent, ToolcraftLayoutFooter as LayoutFooter } from "@openreel/ui";
-import { ToolcraftNumberInputControl } from "@openreel/ui";
-import { ToolcraftSliderControl } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
-import { ToolcraftTextAreaControl } from "@openreel/ui";
-import { ToolcraftTextInputControl } from "@openreel/ui";
+import { ToolcraftSwitchControl } from "@openfield/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftDialog as Dialog, ToolcraftDialogHeader as DialogHeader } from "@openfield/ui";
+import { ToolcraftLayout as Layout, ToolcraftLayoutContent as LayoutContent, ToolcraftLayoutFooter as LayoutFooter } from "@openfield/ui";
+import { ToolcraftNumberInputControl } from "@openfield/ui";
+import { ToolcraftSliderControl } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
+import { ToolcraftTextAreaControl } from "@openfield/ui";
+import { ToolcraftTextInputControl } from "@openfield/ui";
 import { useEngineStore } from "../../stores/engine-store";
 import { useProjectStore } from "../../stores/project-store";
 import type {
@@ -28,7 +28,7 @@ import type {
   ExtendedPlaceholder,
   ScriptableTemplateReplacements,
   ExtendedPlaceholderType,
-} from "@openreel/core";
+} from "@openfield/core";
 
 interface TemplatePreviewModalProps {
   template: ScriptableTemplate;
@@ -151,7 +151,7 @@ export const TemplatePreviewModal: React.FC<TemplatePreviewModalProps> = ({
               lineHeight: 1.2,
             },
             transform: textClip.transform as Partial<
-              import("@openreel/core").Transform
+              import("@openfield/core").Transform
             >,
             animation: {
               preset: "fade",

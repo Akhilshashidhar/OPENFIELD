@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "uuid";
 import type { StoreApi } from "zustand";
-import type { Action, ActionResult } from "@openreel/core";
+import type { Action, ActionResult } from "@openfield/core";
 import type { ProjectState } from "../project-store";
 import { calculateTimelineDuration } from "./index";
 
@@ -130,7 +130,7 @@ export function createClipSlice(set: Set, get: Get): ClipSlice {
       let audioTrackCount = mediaItem.metadata.audioTrackCount ?? 1;
       if (audioTrackCount <= 1 && mediaItem.blob) {
         try {
-          const { getFFmpegFallback } = await import("@openreel/core/media");
+          const { getFFmpegFallback } = await import("@openfield/core/media");
           const ffmpeg = getFFmpegFallback();
           const probeResult = await ffmpeg.probeAudioStreams(mediaItem.blob);
           if (probeResult.audioStreamCount > 1) {

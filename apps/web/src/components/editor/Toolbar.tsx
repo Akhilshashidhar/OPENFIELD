@@ -17,7 +17,7 @@ import {
   type ExportResult,
   type DeviceProfile,
   type TimeEstimate,
-} from "@openreel/core";
+} from "@openfield/core";
 import { ExportDialog } from "./ExportDialog";
 import { CompressDialog } from "./CompressDialog";
 import { deriveSourceExportMatch } from "../../services/export-source-match";
@@ -40,7 +40,7 @@ import {
   ToolcraftIconButton,
   ToolcraftText as Text,
   ToolcraftTextInputControl,
-} from "@openreel/ui";
+} from "@openfield/ui";
 
 type ExportType =
   | "mp4"

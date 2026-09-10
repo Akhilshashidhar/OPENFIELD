@@ -11,16 +11,16 @@ import {
   Droplet,
   Copy,
 } from "@/icons/lucide-compat";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftCard as Card } from "@openreel/ui";
-import { ToolcraftClickableCard as ClickableCard } from "@openreel/ui";
-import { ToolcraftIconButton as IconButton } from "@openreel/ui";
-import { ToolcraftPopover as Popover } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftCard as Card } from "@openfield/ui";
+import { ToolcraftClickableCard as ClickableCard } from "@openfield/ui";
+import { ToolcraftIconButton as IconButton } from "@openfield/ui";
+import { ToolcraftPopover as Popover } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import { PropertySlider } from "./shell/PropertySlider";
 import { useEngineStore } from "../../../stores/engine-store";
 import { useProjectStore } from "../../../stores/project-store";
-import type { AdjustmentLayer, BlendMode, Effect } from "@openreel/core";
+import type { AdjustmentLayer, BlendMode, Effect } from "@openfield/core";
 
 interface AdjustmentLayerSectionProps {
   clipId: string;
@@ -175,7 +175,7 @@ export const AdjustmentLayerSection: React.FC<AdjustmentLayerSectionProps> = ({
   const [expandedLayer, setExpandedLayer] = useState<string | null>(null);
   const [showBlendModes, setShowBlendModes] = useState(false);
   const [adjustmentLayerEngine, setAdjustmentLayerEngine] =
-    useState<import("@openreel/core").AdjustmentLayerEngine | null>(null);
+    useState<import("@openfield/core").AdjustmentLayerEngine | null>(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -216,7 +216,7 @@ export const AdjustmentLayerSection: React.FC<AdjustmentLayerSectionProps> = ({
   );
 
   const persistLayers = useCallback(
-    (engine: import("@openreel/core").AdjustmentLayerEngine) =>
+    (engine: import("@openfield/core").AdjustmentLayerEngine) =>
       useProjectStore.getState().executeAction({
         type: "adjustment/setAll",
         id: crypto.randomUUID(),

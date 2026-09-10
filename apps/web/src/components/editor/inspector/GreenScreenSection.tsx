@@ -1,13 +1,13 @@
 import React, { useState, useCallback, useMemo, useEffect } from "react";
 import { Video, Pipette, RefreshCw, Eye, EyeOff, Layers } from "@/icons/lucide-compat";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftIconButton as IconButton } from "@openreel/ui";
-import { ToolcraftSelectableCard as SelectableCard } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftIconButton as IconButton } from "@openfield/ui";
+import { ToolcraftSelectableCard as SelectableCard } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import { MockSlider } from "./shell/InspectorControls";
 import { useProjectStore } from "../../../stores/project-store";
 import { useEngineStore } from "../../../stores/engine-store";
-import type { RGB, ChromaKeySettings } from "@openreel/core";
+import type { RGB, ChromaKeySettings } from "@openfield/core";
 
 interface GreenScreenSectionProps {
   clipId: string;
@@ -101,7 +101,7 @@ export const GreenScreenSection: React.FC<GreenScreenSectionProps> = ({
 
   const [isPickingColor, setIsPickingColor] = useState(false);
   const [chromaKeyEngine, setChromaKeyEngine] =
-    useState<import("@openreel/core").ChromaKeyEngine | null>(null);
+    useState<import("@openfield/core").ChromaKeyEngine | null>(null);
 
   useEffect(() => {
     let cancelled = false;

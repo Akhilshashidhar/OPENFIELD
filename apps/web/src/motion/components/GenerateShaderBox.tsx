@@ -1,8 +1,8 @@
 import type { JSX } from "react";
 import { useState } from "react";
 import { Sparkles } from "@/icons/lucide-compat";
-import type { MotionShaderCategory, MotionShaderDef } from "@openreel/core";
-import { ToolcraftText } from "@openreel/ui";
+import type { MotionShaderCategory, MotionShaderDef } from "@openfield/core";
+import { ToolcraftText } from "@openfield/ui";
 import { generateAiShader, type LlmMessage } from "../../services/ai-shader";
 import { makeBYOKClient } from "../../services/agent/llm-transport";
 import { getSecret, isSessionUnlocked } from "../../services/secure-storage";

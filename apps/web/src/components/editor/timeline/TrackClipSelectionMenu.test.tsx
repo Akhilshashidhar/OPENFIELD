@@ -1,8 +1,8 @@
 import "../../../test/install-local-storage-mock";
 import { act, cleanup, renderHook } from "@testing-library/react";
 import { afterEach, beforeEach, describe, expect, it } from "vitest";
-import type { Clip, Project, TextClip, Track } from "@openreel/core";
-import type { ToolcraftContextMenuOption as ContextMenuOption } from "@openreel/ui";
+import type { Clip, Project, TextClip, Track } from "@openfield/core";
+import type { ToolcraftContextMenuOption as ContextMenuOption } from "@openfield/ui";
 import { useEngineStore } from "../../../stores/engine-store";
 import { createEmptyProject } from "../../../stores/project/project-helpers";
 import { useProjectStore } from "../../../stores/project-store";

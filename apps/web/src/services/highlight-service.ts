@@ -1,7 +1,7 @@
 import {
   analyzeAudioForHighlights,
   type TranscriptWord,
-} from "@openreel/core";
+} from "@openfield/core";
 
 export interface HighlightResult {
   start: number;

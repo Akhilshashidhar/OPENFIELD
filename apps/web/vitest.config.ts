@@ -44,8 +44,8 @@ export default defineConfig({
       react: path.resolve(__dirname, "./node_modules/react"),
       "react-dom": path.resolve(__dirname, "./node_modules/react-dom"),
       "@": path.resolve(__dirname, "./src"),
-      "@openreel/core": path.resolve(__dirname, "../../packages/core/src"),
-      "@openreel/agent": path.resolve(__dirname, "../../packages/agent/src"),
+      "@openfield/core": path.resolve(__dirname, "../../packages/core/src"),
+      "@openfield/agent": path.resolve(__dirname, "../../packages/agent/src"),
     },
   },
 });

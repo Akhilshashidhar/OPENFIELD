@@ -1,4 +1,4 @@
-import type { MotionComposition, Project } from "@openreel/core";
+import type { MotionComposition, Project } from "@openfield/core";
 
 function hasComposition(
   compositions: readonly MotionComposition[],

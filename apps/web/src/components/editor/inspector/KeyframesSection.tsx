@@ -7,13 +7,13 @@ import {
   Diamond,
   DiamondIcon,
 } from "@/icons/lucide-compat";
-import { ToolcraftButton as Button } from "@openreel/ui";
-import { ToolcraftCard as Card } from "@openreel/ui";
-import { ToolcraftClickableCard as ClickableCard } from "@openreel/ui";
-import { ToolcraftIconButton as IconButton } from "@openreel/ui";
-import { ToolcraftNumberInputControl } from "@openreel/ui";
-import { ToolcraftPopover as Popover } from "@openreel/ui";
-import { ToolcraftText as Text } from "@openreel/ui";
+import { ToolcraftButton as Button } from "@openfield/ui";
+import { ToolcraftCard as Card } from "@openfield/ui";
+import { ToolcraftClickableCard as ClickableCard } from "@openfield/ui";
+import { ToolcraftIconButton as IconButton } from "@openfield/ui";
+import { ToolcraftNumberInputControl } from "@openfield/ui";
+import { ToolcraftPopover as Popover } from "@openfield/ui";
+import { ToolcraftText as Text } from "@openfield/ui";
 import { useProjectStore } from "../../../stores/project-store";
 import { useTimelineStore } from "../../../stores/timeline-store";
 import { useEngineStore } from "../../../stores/engine-store";
@@ -21,8 +21,8 @@ import {
   KeyframeEngine,
   EASING_CATEGORIES,
   type EasingName,
-} from "@openreel/core";
-import type { Keyframe, EasingType } from "@openreel/core";
+} from "@openfield/core";
+import type { Keyframe, EasingType } from "@openfield/core";
 
 const keyframeEngine = new KeyframeEngine();
 

@@ -23,7 +23,7 @@ import {
   ToolcraftSwitchControl,
   ToolcraftTextAreaControl,
   ToolcraftTextInputControl,
-} from "@openreel/ui";
+} from "@openfield/ui";
 import type { LucideIcon } from "@/icons/lucide-compat";
 
 type IconButtonVariant =

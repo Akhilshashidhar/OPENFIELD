@@ -1,4 +1,4 @@
-import type { Project } from "@openreel/core";
+import type { Project } from "@openfield/core";
 
 export interface AutoSaveConfig {
   interval: number;
@@ -32,7 +32,7 @@ const DEFAULT_CONFIG: AutoSaveConfig = {
   debounceTime: 2000, // 2 seconds
 };
 
-const AUTO_SAVE_DB_NAME = "openreel-autosave";
+const AUTO_SAVE_DB_NAME = "openfield-autosave";
 const AUTO_SAVE_DB_VERSION = 1;
 const AUTO_SAVE_STORE = "autosaves";
 
