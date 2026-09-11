@@ -78,12 +78,36 @@ export function trackEvent(event: string, properties?: EventProperties): void {
 }
 
 export const AnalyticsEvents = {
-  PROJECT_CREATED: "project_created",
-  PROJECT_OPENED: "project_opened",
-  PROJECT_EXPORTED: "project_exported",
+  // ── Already wired and firing today ─────────────────────────────
+  PROJECT_CREATED: "project_created", // WelcomeScreen / StartFromScratch / createNewProject
+  PROJECT_OPENED: "project_opened", // RecentProjects (recover/open)
+  PROJECT_EXPORTED: "project_exported", // Toolbar export completion
   CLIP_ADDED: "clip_added",
   TEXT_ADDED: "text_added",
   EFFECT_APPLIED: "effect_applied",
   PARTICLE_EFFECT_ADDED: "particle_effect_added",
   TEMPLATE_USED: "template_used",
+
+  // ── Launch product-event catalog (single source of truth) ──────
+  // Auth events below are emitted from stores/auth-store.ts today as
+  // "signed_in" / "signed_up" / "logged_out". These aliases document the
+  // canonical launch names; do not double-emit.
+  SIGNUP_COMPLETED: "signed_up", // auth-store.signUpWithPassword (already fires)
+  LOGIN: "signed_in", // auth-store.signIn* (already fires)
+  LOGOUT: "logged_out", // auth-store.signOut (already fires)
+
+  // The following correspond to real actions that are NOT yet instrumented.
+  // Wire each with a single trackEvent(...) call at the noted location when
+  // ready — the utility already fans out to GA4 + PostHog + Supabase.
+  //   EDITOR_OPENED   → App.tsx, when route === "editor" is first mounted
+  //   MEDIA_UPLOADED  → stores/project/media-slice.ts importMedia() on success
+  //                     (send only mime/type + size bucket, never file contents)
+  //   AI_AGENT_USED   → services/agent loop begin() (send tool/domain, no prompt text)
+  //   EXPORT_STARTED  → components/editor/Toolbar.tsx runExport() start
+  //   SIGNUP_STARTED  → the signup form submit handler (before supabase.auth.signUp)
+  EDITOR_OPENED: "editor_opened",
+  MEDIA_UPLOADED: "media_uploaded",
+  AI_AGENT_USED: "ai_agent_used",
+  EXPORT_STARTED: "export_started",
+  SIGNUP_STARTED: "signup_started",
 } as const;

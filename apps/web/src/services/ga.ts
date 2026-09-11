@@ -55,12 +55,17 @@ function ensureGtag(): boolean {
 
     const script = document.createElement("script");
     script.async = true;
+    // The app ships `Cross-Origin-Embedder-Policy: require-corp` (public/_headers)
+    // to enable threaded WASM. Under COEP, cross-origin subresources must be
+    // fetched in CORS mode; loading gtag.js in CORS mode (Google serves the
+    // needed CORS headers) prevents COEP from blocking the script.
+    script.crossOrigin = "anonymous";
     script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(
       measurementId,
     )}`;
     // Failing to load must never break the app; swallow errors silently.
     script.onerror = () => {
-      /* GA blocked (ad-blocker/offline) — app continues normally. */
+      /* GA blocked (ad-blocker/offline/COEP) — app continues normally. */
     };
     document.head.appendChild(script);
 
