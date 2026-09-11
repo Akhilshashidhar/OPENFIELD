@@ -194,7 +194,7 @@ export const LandingPage: React.FC = () => {
       </section>
 
       <footer className="py-8 text-center text-[12px]" style={{ color: FAINT, borderTop: `1px solid ${HAIRLINE}` }}>
-        Openfield — built on OpenReel (MIT). Create without limits.
+        Openfield — a browser-based video editor. Built on open-source (MIT). Create without limits.
       </footer>
     </div>
   );

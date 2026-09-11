@@ -40,12 +40,42 @@ const SERVICE_CONFIG: Record<string, ServiceConfig> = {
   },
 };
 
-const ALLOWED_ORIGINS = [
+/**
+ * Origins allowed to call this proxy from a browser.
+ *
+ * Production is openfield.co.in. The legacy Cloudflare Pages preview domains
+ * and localhost dev/preview ports are kept so existing deploys and local
+ * development keep working. Additional origins can be added at deploy time via
+ * the `ALLOWED_ORIGINS` environment variable (comma-separated) without a code
+ * change — see resolveAllowedOrigins().
+ */
+const DEFAULT_ALLOWED_ORIGINS = [
+  "https://openfield.co.in",
+  "https://www.openfield.co.in",
+  // Cloudflare Pages project preview/prod aliases (kept for existing deploys).
+  "https://openfield.pages.dev",
   "https://openreel.pages.dev",
   "https://openreel-preview.pages.dev",
+  // Local development (Vite dev server + vite preview).
   "http://localhost:5173",
+  "http://127.0.0.1:5173",
   "http://localhost:4173",
+  "http://127.0.0.1:4173",
 ];
+
+/**
+ * Merge the built-in allowlist with any origins provided via the
+ * `ALLOWED_ORIGINS` env var (comma-separated). Trailing slashes and blank
+ * entries are ignored. Returns a Set for O(1) exact-match lookups.
+ */
+function resolveAllowedOrigins(env: Record<string, unknown> | undefined): Set<string> {
+  const extra = typeof env?.ALLOWED_ORIGINS === "string" ? env.ALLOWED_ORIGINS : "";
+  const fromEnv = extra
+    .split(",")
+    .map((o) => o.trim().replace(/\/+$/, ""))
+    .filter((o) => o.length > 0);
+  return new Set([...DEFAULT_ALLOWED_ORIGINS, ...fromEnv]);
+}
 
 const MAX_REQUEST_BODY_BYTES = 8_388_608; // 8 MB (agent tool/state payloads)
 const UPSTREAM_TIMEOUT_MS = 120_000;
@@ -84,15 +114,27 @@ async function readBodyCapped(
   return out.buffer;
 }
 
-function getCorsHeaders(request: Request): Record<string, string> {
+function getCorsHeaders(
+  request: Request,
+  allowedOrigins: Set<string>,
+): Record<string, string> {
   const origin = request.headers.get("Origin") ?? "";
-  const allowedOrigin = ALLOWED_ORIGINS.includes(origin) ? origin : ALLOWED_ORIGINS[0];
-  return {
-    "Access-Control-Allow-Origin": allowedOrigin,
+  const headers: Record<string, string> = {
     "Access-Control-Allow-Methods": "GET, POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type, x-proxy-api-key",
+    // Responses vary per Origin, so caches must not reuse one origin's CORS
+    // headers for another.
     Vary: "Origin",
   };
+  // Only reflect the caller's origin when it is explicitly allowlisted. If it
+  // is not (or absent), we deliberately omit Access-Control-Allow-Origin so the
+  // browser blocks the cross-origin read — we never echo a *different* allowed
+  // origin, which would neither help the real caller nor authorize the unknown
+  // one. We never use "*", so credentials/keys are never exposed cross-origin.
+  if (origin && allowedOrigins.has(origin)) {
+    headers["Access-Control-Allow-Origin"] = origin;
+  }
+  return headers;
 }
 
 function jsonError(
@@ -107,7 +149,10 @@ function jsonError(
 }
 
 export const onRequest: PagesFunction = async (context) => {
-  const corsHeaders = getCorsHeaders(context.request);
+  const allowedOrigins = resolveAllowedOrigins(
+    context.env as Record<string, unknown> | undefined,
+  );
+  const corsHeaders = getCorsHeaders(context.request, allowedOrigins);
 
   if (context.request.method === "OPTIONS") {
     return new Response(null, { status: 204, headers: corsHeaders });

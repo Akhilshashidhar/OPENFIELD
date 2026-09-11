@@ -61,7 +61,7 @@ const FORMAT_OPTIONS: FormatOption[] = [
   },
 ];
 
-const OpenReelLogo: React.FC<{ className?: string }> = ({ className = "" }) => (
+const OpenfieldLogo: React.FC<{ className?: string }> = ({ className = "" }) => (
   <svg
     viewBox="0 0 490 490"
     fill="none"
@@ -252,10 +252,10 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ initialTab }) => {
           <div className="flex flex-col items-center text-center mb-12">
             <div className="flex items-center gap-3 mb-6">
               <div className="w-12 h-12 text-primary">
-                <OpenReelLogo className="w-full h-full" />
+                <OpenfieldLogo className="w-full h-full" />
               </div>
               <Text type="body" color="primary" weight="semibold" className="text-xl text-text-primary tracking-tight">
-                Open Reel Video
+                Openfield
               </Text>
             </div>
 
